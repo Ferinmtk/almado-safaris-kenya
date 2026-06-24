@@ -237,3 +237,12 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 
 /* Photo heroes don't need the decorative sun overlay */
 .hero .horizon, .page-hero .horizon{display:none}
+
+/* ============================================================
+   17. Per-page hero images
+   ============================================================ */
+.page-hero.ph-services{background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/services-hero.jpg') center 42%/cover}
+.page-hero.ph-safaris {background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/road.jpg') center 40%/cover}
+.page-hero.ph-fleet   {background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/fleet-hero.jpg') center 50%/cover}
+.page-hero.ph-about   {background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/about-hero.jpg') center 45%/cover}
+.page-hero.ph-contact {background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/contact-hero.jpg') center 45%/cover}
