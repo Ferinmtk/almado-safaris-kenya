@@ -21,13 +21,13 @@
 
 /* 1. Design tokens ----------------------------------------- */
 :root{
-  --ink:#16201c;        /* deep acacia shadow */
-  --ink-soft:#23302a;
-  --sand:#e8dcc4;       /* warm savannah sand */
-  --paper:#f7f3ea;      /* off-white */
-  --gold:#e0a23b;       /* savannah sun */
-  --clay:#b5462e;       /* maasai clay */
-  --sage:#7a8b6f;       /* muted scrub */
+  --ink:#15233f;        /* brand navy (from logo) */
+  --ink-soft:#20314f;
+  --sand:#ece3d0;       /* warm sand */
+  --paper:#f7f4ee;      /* off-white */
+  --gold:#c99a3c;       /* brand gold (from logo) */
+  --clay:#b5763a;       /* warm gold-brown accent */
+  --sage:#5d6e8a;       /* muted slate-blue */
   --muted:#9aa79a;
   --line:#e3dccd;
   --maxw:1120px;
@@ -70,8 +70,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(22,32,28,.92);backdrop-f
 
 /* 5. Hero -------------------------------------------------- */
 .hero{position:relative;color:var(--paper);overflow:hidden;
-  /* PHOTO: replace gradient with: linear-gradient(rgba(22,32,28,.55),rgba(22,32,28,.85)),url('../assets/images/hero.jpg') center/cover; */
-  background:linear-gradient(180deg,#1c2a24 0%,#16201c 60%,#101713 100%)}
+  background:linear-gradient(rgba(21,35,63,.72),rgba(21,35,63,.90)),url('../assets/images/hero.jpg') center 35%/cover}
 .horizon{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .sun{position:absolute;right:12%;top:18%;width:140px;height:140px;border-radius:50%;
   background:radial-gradient(circle,var(--gold) 0%,#d98b2a 55%,transparent 72%);opacity:.85;filter:blur(.5px)}
@@ -181,7 +180,7 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 
 /* Compact page hero for inner pages */
 .page-hero{position:relative;color:var(--paper);overflow:hidden;
-  background:linear-gradient(180deg,#1c2a24 0%,#16201c 100%)}
+  background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/road.jpg') center 40%/cover}
 .page-hero .sun{top:30%;width:110px;height:110px;opacity:.7}
 .page-hero-inner{position:relative;padding:72px 0 64px;max-width:720px}
 .page-hero h1{font-size:clamp(2.1rem,5vw,3.4rem);color:var(--paper)}
@@ -205,8 +204,8 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 
 /* About layout */
 .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
-.about-grid .ph{aspect-ratio:4/3;border-radius:18px;background:linear-gradient(160deg,#8a9a7d,#5f6e54);
-  /* PHOTO: background:url('../assets/images/team.jpg') center/cover; */
+.about-grid .ph{aspect-ratio:4/3;border-radius:18px;
+  background:url('../assets/images/team.jpg') center/cover;
   display:flex;align-items:center;justify-content:center;color:#fff;font-size:.9rem}
 .about-grid h2{font-size:clamp(1.8rem,4vw,2.6rem);margin:12px 0 16px}
 .about-grid p{color:#55615a;margin-bottom:14px}
@@ -220,3 +219,21 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
   .about-grid{grid-template-columns:1fr}
   .values{grid-template-columns:1fr}
 }
+
+/* ============================================================
+   16. Brand logo in header + photo-backed fleet cards
+   ============================================================ */
+.brand{flex-direction:row;align-items:center;gap:11px}
+.brand .badge{width:42px;height:42px;border-radius:50%;background:#fff;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.brand .badge img{width:100%;height:100%;object-fit:cover}
+.brand .txt{display:flex;flex-direction:column;line-height:1.1}
+
+/* Fleet card photos now load real images; remove placeholder look */
+.vehicle .ph{background-color:#dfe3ea}
+
+/* About logo block */
+.about-logo{max-width:300px;margin:0 auto 8px}
+
+/* Photo heroes don't need the decorative sun overlay */
+.hero .horizon, .page-hero .horizon{display:none}

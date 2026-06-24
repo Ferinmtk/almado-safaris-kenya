@@ -1,13 +1,17 @@
-Put your photos here, then reference them from css/styles.css or index.html.
+Images used by the site (already wired in):
 
-Suggested filenames (match the comments in the code):
-  hero.jpg              wide landscape / safari road shot (1600px+ wide)
-  mara.jpg              Maasai Mara
-  amboseli.jpg          Amboseli
-  tsavo.jpg             Tsavo
-  diani.jpg             Diani / coast
-  vehicle-cruiser.jpg   4x4 Land Cruiser
-  vehicle-van.jpg       Tour van
-  vehicle-sedan.jpg     Executive sedan
+  logo.png        Full Almado Safaris Kenya logo (About page, footer)
+  emblem.png      Circular emblem (header badge)
+  favicon.png     Browser tab icon
+  hero.jpg        Homepage hero — branded silver van at JKIA
+  road.jpg        Inner-page hero backdrop (savannah road)
+  airport.jpg     White van at Terminal 1-A
+  van-silver.jpg  Almado branded van (fleet)
+  van-white.jpg   White tour/group van, side (fleet)
+  van-front.jpg   White van, front (fleet)
+  sedan.jpg       Ford executive sedan (fleet)
+  interior.jpg    Cabin interior (fleet)
+  driver.jpg      Driver at the wheel (spare)
+  team.jpg        Owner with the fleet (About page)
 
-Tip: compress images (tinypng.com) before uploading so the site loads fast.
+To swap any image, replace the file here keeping the same name — no code change needed.

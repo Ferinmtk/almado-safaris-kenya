@@ -11,7 +11,8 @@ tools required to run.
 | `index.html`   | Home                       |
 | `services.html`| Services (detailed)        |
 | `safaris.html` | Safari packages & itineraries |
-| `fleet.html`   | Our fleet                  |
+| `fleet.html`   | Our fleet (real vehicles)  |
+| `about.html`   | About the company          |
 | `contact.html` | Contact + inquiry form     |
 
 ## Project structure
