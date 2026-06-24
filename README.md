@@ -1,59 +1,64 @@
 # Almado Safaris Kenya
 
 Marketing website for **Almado Support Enterprise** — *Your Trusted Travel and
-Transportation Partner in Kenya.*
+Transportation Partner in Kenya.* Static site: HTML + CSS + vanilla JS, no build
+tools required to run.
 
-A static, dependency-free site (HTML + CSS + vanilla JS). No build step.
+## Pages (standalone)
+
+| File           | Page                       |
+|----------------|----------------------------|
+| `index.html`   | Home                       |
+| `services.html`| Services (detailed)        |
+| `safaris.html` | Safari packages & itineraries |
+| `fleet.html`   | Our fleet                  |
+| `contact.html` | Contact + inquiry form     |
 
 ## Project structure
 
 ```
 almado-safaris-kenya/
-├── index.html          # Homepage
-├── css/
-│   └── styles.css      # All styling (design tokens at the top)
-├── js/
-│   └── main.js         # Config + small interactions
-├── assets/
-│   └── images/         # Your photos go here
+├── index.html  services.html  safaris.html  fleet.html  contact.html
+├── css/styles.css      # All styling (design tokens at top, numbered sections)
+├── js/main.js          # CONFIG (contact details) + interactions
+├── assets/images/      # Your photos
+├── .build/             # Shared partials (head, header, footer, page bodies)
+├── build.sh            # Re-assembles the pages from .build/ partials
 ├── .gitignore
 └── README.md
 ```
 
 ## Run locally
 
-Just open `index.html` in a browser. For a local server (recommended, so paths
-resolve cleanly):
+```bash
+python3 -m http.server 8000   # then open http://localhost:8000
+```
+
+## Editing the shared header/footer
+
+The header and footer are identical on every page. **Don't edit them in each
+HTML file** — edit the partials in `.build/`, then regenerate:
 
 ```bash
-# Python 3
-python3 -m http.server 8000
-# then visit http://localhost:8000
+bash build.sh
 ```
+
+This rewrites all five pages so they never drift out of sync. If you only edit
+page content, you can also edit the `.html` files directly.
 
 ## Configure before launch
 
-1. **Contact details & WhatsApp number** — open `js/main.js` and edit the
-   `CONFIG` object (`whatsapp`, `whatsappMessage`). All WhatsApp links update
-   automatically.
-2. **Phone / email** — in `index.html`, search for `REPLACE_` and fill in.
-3. **Contact form** — create a free form at <https://formspree.io>, then in
-   `index.html` replace `YOUR_FORM_ID` in the form's `action`. Submissions then
-   arrive in your email.
+1. **WhatsApp + contact details** — edit the `CONFIG` object in `js/main.js`.
+   All WhatsApp links update automatically.
+2. **Phone / email** — search for `REPLACE_` across the `.html` files (or in
+   `.build/body-contact.html`, then run `build.sh`).
+3. **Contact form** — create a free form at <https://formspree.io>, then replace
+   `YOUR_FORM_ID` in `contact.html` (or `.build/body-contact.html`).
 4. **Photos** — add images to `assets/images/` and follow the `PHOTO:` comments
-   in `index.html` and `css/styles.css`.
+   in the HTML/CSS.
 
 ## Deploy
 
-Static host — pick one:
-
-- **Netlify:** drag this folder onto app.netlify.com.
-- **Cloudflare Pages / GitHub Pages:** push to a repo and connect.
-- **cPanel host:** upload contents to `public_html`.
-
-Then point the domain **AlmadoSafarisKenya.com** to your host.
-
-## Tech
-
-HTML5 · CSS3 (custom properties, grid, flexbox) · vanilla JavaScript.
-Fonts: Fraunces (display) + Inter (body) via Google Fonts.
+Static host — Netlify (drag the folder in), Cloudflare Pages, GitHub Pages, or
+any cPanel host (upload to `public_html`). Then point **AlmadoSafarisKenya.com**
+at it.
