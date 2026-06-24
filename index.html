@@ -1,360 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Almado Safaris Kenya — Trusted Travel & Transport in Kenya</title>
-<meta name="description" content="Almado Support Enterprise — safe, reliable airport transfers, safari tours, corporate transport, and car hire across Kenya. Request a quote today.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Almado Safaris Kenya — Trusted Travel &amp; Transport in Kenya</title>
+  <meta name="description" content="Almado Support Enterprise — safe, reliable airport transfers, safari tours, corporate transport, and car hire across Kenya. Request a quote today.">
 
-<!-- ============================================================
-     EDIT GUIDE (read me first):
-     1. WhatsApp number: search "2547XXXXXXXX" and replace with your
-        full number, no + and no spaces (e.g. 254712345678).
-     2. Phone / email: search "REPLACE_" tags below.
-     3. Photos: search "PHOTO:" comments — drop your own image URLs
-        into the background-image / src spots marked there.
-     4. Contact form: it posts to Formspree. Create a free form at
-        formspree.io, then replace "YOUR_FORM_ID" in the form action.
-     ============================================================ -->
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Almado Safaris Kenya">
+  <meta property="og:description" content="Your trusted travel and transportation partner in Kenya.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://almadosafariskenya.com">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-  :root{
-    --ink:#16201c;        /* deep acacia shadow */
-    --ink-soft:#23302a;
-    --sand:#e8dcc4;        /* warm savannah sand */
-    --paper:#f7f3ea;       /* off-white */
-    --gold:#e0a23b;        /* savannah sun */
-    --clay:#b5462e;        /* maasai clay */
-    --sage:#7a8b6f;        /* muted scrub */
-    --muted:#9aa79a;
-    --maxw:1120px;
-  }
-
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:'Inter',system-ui,sans-serif;
-    background:var(--paper);
-    color:var(--ink);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-0.01em}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  .eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--clay)}
-
-  /* ---------- HEADER ---------- */
-  header{position:sticky;top:0;z-index:50;background:rgba(22,32,28,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(232,220,196,.12)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .brand{display:flex;flex-direction:column;color:var(--paper)}
-  .brand b{font-family:'Fraunces',serif;font-size:1.15rem;letter-spacing:-.01em}
-  .brand span{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{color:var(--sand);font-size:.92rem;font-weight:500;opacity:.85;transition:opacity .2s}
-  .nav-links a:hover{opacity:1}
-  .nav-cta{background:var(--gold);color:var(--ink)!important;padding:9px 18px;border-radius:999px;font-weight:600;opacity:1!important}
-  .menu-btn{display:none;background:none;border:0;color:var(--paper);font-size:1.5rem;cursor:pointer}
-
-  /* ---------- HERO ---------- */
-  .hero{position:relative;color:var(--paper);overflow:hidden;
-    /* PHOTO: replace the gradient below with your best wide safari/road shot:
-       background:linear-gradient(rgba(22,32,28,.55),rgba(22,32,28,.85)),url('your-hero.jpg') center/cover; */
-    background:linear-gradient(180deg,#1c2a24 0%,#16201c 60%,#101713 100%);
-  }
-  .horizon{position:absolute;inset:0;pointer-events:none;overflow:hidden}
-  .sun{position:absolute;right:12%;top:18%;width:140px;height:140px;border-radius:50%;
-    background:radial-gradient(circle,var(--gold) 0%,#d98b2a 55%,transparent 72%);opacity:.85;filter:blur(.5px)}
-  .ridge{position:absolute;left:0;right:0;bottom:0;height:140px;
-    background:radial-gradient(120% 100% at 50% 100%,var(--ink-soft) 0%,transparent 70%)}
-  .acacia{position:absolute;bottom:22px;right:8%;font-size:0;opacity:.5}
-  .hero-inner{position:relative;padding:96px 0 110px;max-width:760px}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);color:var(--paper)}
-  .hero h1 em{font-style:italic;color:var(--gold)}
-  .hero p{margin-top:22px;font-size:1.18rem;color:var(--sand);max-width:560px}
-  .hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:1rem;cursor:pointer;border:0;transition:transform .15s,box-shadow .15s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 8px 24px rgba(224,162,59,.28)}
-  .btn-wa{background:#25d366;color:#04331a;box-shadow:0 8px 24px rgba(37,211,102,.25)}
-  .btn-ghost{background:transparent;color:var(--paper);border:1.5px solid rgba(232,220,196,.35)}
-  .hero-strip{position:relative;border-top:1px solid rgba(232,220,196,.14);background:rgba(16,23,19,.55)}
-  .hero-strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;padding:18px 24px;color:var(--sand);font-size:.9rem}
-  .hero-strip b{color:var(--gold);font-weight:600}
-
-  /* ---------- SECTION SHELL ---------- */
-  section{padding:84px 0}
-  .sec-head{max-width:640px;margin-bottom:46px}
-  .sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-top:12px}
-  .sec-head p{margin-top:14px;color:#55615a;font-size:1.05rem}
-
-  /* ---------- SERVICES ---------- */
-  .services{background:var(--ink);color:var(--paper)}
-  .services .sec-head h2{color:var(--paper)}
-  .services .sec-head p{color:var(--sand)}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .card{background:var(--ink-soft);border:1px solid rgba(232,220,196,.1);border-radius:16px;padding:28px;transition:border-color .2s,transform .2s}
-  .card:hover{border-color:var(--gold);transform:translateY(-4px)}
-  .card .ic{width:44px;height:44px;border-radius:10px;background:rgba(224,162,59,.14);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
-  .card h3{font-size:1.3rem;color:var(--paper);margin-bottom:8px}
-  .card p{color:var(--sand);font-size:.95rem}
-
-  /* ---------- DESTINATIONS ---------- */
-  .dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-  .dest{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--sage);color:#fff;display:flex;align-items:flex-end;padding:18px;
-    /* PHOTO: set each card's background to a destination image, e.g.
-       background:linear-gradient(transparent,rgba(22,32,28,.8)),url('mara.jpg') center/cover; */
-    background:linear-gradient(160deg,#8a9a7d,#5f6e54)}
-  .dest::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(22,32,28,.85))}
-  .dest span{position:relative;z-index:1;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600}
-
-  /* ---------- FLEET ---------- */
-  .fleet{background:var(--sand)}
-  .fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .vehicle{background:var(--paper);border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(22,32,28,.07)}
-  .vehicle .ph{aspect-ratio:16/10;background:#cabfa6 center/cover;display:flex;align-items:center;justify-content:center;color:#7c7058;font-size:.85rem;letter-spacing:.05em}
-  .vehicle .body{padding:20px}
-  .vehicle h3{font-size:1.15rem;margin-bottom:6px}
-  .vehicle p{font-size:.9rem;color:#55615a}
-
-  /* ---------- TRUST ---------- */
-  .trust{background:var(--ink);color:var(--paper)}
-  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
-  .trust .n{font-family:'Fraunces',serif;font-size:2.6rem;color:var(--gold);font-weight:700}
-  .trust .l{color:var(--sand);font-size:.95rem;margin-top:6px}
-
-  /* ---------- CONTACT ---------- */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-  .contact-info h2{font-size:clamp(1.9rem,4vw,2.8rem);margin:12px 0 18px}
-  .contact-info p{color:#55615a;margin-bottom:24px}
-  .info-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid #e3dcc d}
-  .info-row{border-top:1px solid #e3dccd}
-  .info-row .ic{width:40px;height:40px;border-radius:10px;background:rgba(181,70,46,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
-  .info-row b{display:block;font-size:.95rem}
-  .info-row span{font-size:.88rem;color:#55615a}
-  form{background:var(--paper);border:1px solid #e3dccd;border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(22,32,28,.06)}
-  .field{margin-bottom:16px}
-  label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px}
-  input,select,textarea{width:100%;padding:12px 14px;border:1px solid #d8cfb a;border:1px solid #d8cfba;border-radius:10px;font-family:inherit;font-size:.95rem;background:#fff;color:var(--ink)}
-  input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
-  textarea{resize:vertical;min-height:90px}
-  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  form .btn-gold{width:100%;justify-content:center;margin-top:6px}
-  .form-note{font-size:.78rem;color:#7c7058;margin-top:12px;text-align:center}
-
-  /* ---------- FOOTER ---------- */
-  footer{background:#101713;color:var(--sand);padding:54px 0 28px}
-  .foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:28px;padding-bottom:30px;border-bottom:1px solid rgba(232,220,196,.12)}
-  .foot-top .brand b{color:var(--paper)}
-  .foot-links{display:flex;gap:40px;flex-wrap:wrap}
-  .foot-links div b{color:var(--paper);font-size:.85rem;display:block;margin-bottom:10px}
-  .foot-links a{display:block;font-size:.88rem;padding:3px 0;opacity:.8}
-  .foot-links a:hover{opacity:1;color:var(--gold)}
-  .copy{padding-top:24px;font-size:.8rem;opacity:.7}
-
-  /* ---------- FLOATING WHATSAPP ---------- */
-  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:transform .15s}
-  .wa-float:hover{transform:scale(1.08)}
-  .wa-float svg{width:30px;height:30px;fill:#fff}
-
-  /* ---------- RESPONSIVE ---------- */
-  @media(max-width:860px){
-    .nav-links{display:none}
-    .menu-btn{display:block}
-    .grid,.fleet-grid{grid-template-columns:1fr}
-    .dest-grid{grid-template-columns:1fr 1fr}
-    .trust-grid{grid-template-columns:1fr 1fr;gap:32px}
-    .contact-grid{grid-template-columns:1fr}
-    .row2{grid-template-columns:1fr}
-    .sun{width:90px;height:90px;right:8%}
-  }
-  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a href="#top" class="brand">
-      <b>Almado Safaris Kenya</b>
-      <span>Almado Support Enterprise</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#destinations">Safaris</a>
-      <a href="#fleet">Fleet</a>
-      <a href="#contact">Contact</a>
-      <a href="#contact" class="nav-cta">Request a quote</a>
-    </nav>
-    <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('.nav-links').style.display='flex';this.style.display='none'">☰</button>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="top" style="padding:0">
-  <div class="horizon" aria-hidden="true">
-    <div class="sun"></div>
-    <div class="ridge"></div>
-  </div>
-  <div class="wrap hero-inner">
-    <p class="eyebrow" style="color:var(--gold)">Your trusted travel & transport partner in Kenya</p>
-    <h1>Explore Kenya with <em>confidence</em> and comfort.</h1>
-    <p>Safe, reliable, and memorable journeys — from airport transfers and corporate transport to unforgettable safari adventures across the country.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-gold">Plan your trip</a>
-      <a href="https://wa.me/2547XXXXXXXX" class="btn btn-wa" target="_blank" rel="noopener">Chat on WhatsApp</a>
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="brand">
+        <b>Almado Safaris Kenya</b>
+        <span>Almado Support Enterprise</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#destinations">Safaris</a>
+        <a href="#fleet">Fleet</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Request a quote</a>
+      </nav>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false">☰</button>
     </div>
-  </div>
-  <div class="hero-strip">
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top" style="padding:0">
+    <div class="horizon" aria-hidden="true">
+      <div class="sun"></div>
+      <div class="ridge"></div>
+    </div>
+    <div class="wrap hero-inner">
+      <p class="eyebrow" style="color:var(--gold)">Your trusted travel &amp; transport partner in Kenya</p>
+      <h1>Explore Kenya with <em>confidence</em> and comfort.</h1>
+      <p>Safe, reliable, and memorable journeys — from airport transfers and corporate transport to unforgettable safari adventures across the country.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-gold">Plan your trip</a>
+        <a href="#" class="btn btn-wa" data-whatsapp target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-strip">
+      <div class="wrap">
+        <span><b>✓</b> Professional drivers</span>
+        <span><b>✓</b> Well-maintained 4x4 fleet</span>
+        <span><b>✓</b> Local &amp; international clients</span>
+        <span><b>✓</b> Available 24/7</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
     <div class="wrap">
-      <span><b>✓</b> Professional drivers</span>
-      <span><b>✓</b> Well-maintained 4x4 fleet</span>
-      <span><b>✓</b> Local & international clients</span>
-      <span><b>✓</b> Available 24/7</span>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="services">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">What we do</span>
-      <h2>Travel solutions, tailored to you</h2>
-      <p>Whether it's a business trip, a family vacation, or a once-in-a-lifetime safari, we handle the logistics so you can enjoy the journey.</p>
-    </div>
-    <div class="grid">
-      <div class="card"><div class="ic">✈️</div><h3>Airport Transfers</h3><p>Punctual, comfortable pickups and drop-offs at JKIA, Wilson, and regional airports — day or night.</p></div>
-      <div class="card"><div class="ic">🦁</div><h3>Safari Tours</h3><p>Guided game drives to Maasai Mara, Amboseli, Tsavo and beyond, in 4x4 vehicles built for the terrain.</p></div>
-      <div class="card"><div class="ic">💼</div><h3>Corporate Transport</h3><p>Reliable staff shuttles, executive transfers, and event logistics for businesses and organisations.</p></div>
-      <div class="card"><div class="ic">🚗</div><h3>Car Hire</h3><p>Self-drive or chauffeured rentals — sedans, vans, and 4x4s — at flexible daily and weekly rates.</p></div>
-      <div class="card"><div class="ic">🗺️</div><h3>Custom Travel</h3><p>Bespoke itineraries combining cities, coast, and wilderness, planned around your dates and budget.</p></div>
-      <div class="card"><div class="ic">👨‍👩‍👧</div><h3>Family & Group Trips</h3><p>Spacious vehicles and friendly drivers for vacations, school trips, and group getaways.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- DESTINATIONS -->
-<section id="destinations">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Where we'll take you</span>
-      <h2>Kenya's most loved destinations</h2>
-      <p>From the great wildebeest migration to the foot of Kilimanjaro and the white sands of the coast.</p>
-    </div>
-    <!-- PHOTO: drop a destination image into each .dest background -->
-    <div class="dest-grid">
-      <div class="dest"><span>Maasai Mara</span></div>
-      <div class="dest"><span>Amboseli</span></div>
-      <div class="dest"><span>Tsavo East & West</span></div>
-      <div class="dest"><span>Diani & the Coast</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- FLEET -->
-<section class="fleet" id="fleet">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Our fleet</span>
-      <h2>The right vehicle for every journey</h2>
-      <p>Clean, insured, and regularly serviced — chosen to match your group size and route.</p>
-    </div>
-    <!-- PHOTO: replace the .ph div background with your vehicle photos -->
-    <div class="fleet-grid">
-      <div class="vehicle"><div class="ph">PHOTO: 4x4 Land Cruiser</div><div class="body"><h3>Safari Land Cruiser</h3><p>Pop-up roof, 6–7 seats. Built for game drives and rough terrain.</p></div></div>
-      <div class="vehicle"><div class="ph">PHOTO: Tour Van</div><div class="body"><h3>Tour Van</h3><p>Comfortable seating for groups, ideal for city tours and transfers.</p></div></div>
-      <div class="vehicle"><div class="ph">PHOTO: Executive Sedan</div><div class="body"><h3>Executive Sedan</h3><p>Smart, air-conditioned rides for corporate and airport transfers.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TRUST -->
-<section class="trust">
-  <div class="wrap">
-    <div class="trust-grid">
-      <div><div class="n">24/7</div><div class="l">Support & availability</div></div>
-      <div><div class="n">100%</div><div class="l">Licensed & insured</div></div>
-      <div><div class="n">5★</div><div class="l">Customer-first service</div></div>
-      <div><div class="n">All</div><div class="l">Kenya covered</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-info">
-      <span class="eyebrow">Get in touch</span>
-      <h2>Request a quote</h2>
-      <p>Tell us where you're headed and we'll get back to you with a tailored quote. Prefer to talk? Reach us directly below.</p>
-      <div class="info-row"><div class="ic">💬</div><div><b>WhatsApp</b><span>REPLACE_+254 7XX XXX XXX</span></div></div>
-      <div class="info-row"><div class="ic">📞</div><div><b>Phone</b><span>REPLACE_+254 7XX XXX XXX</span></div></div>
-      <div class="info-row"><div class="ic">✉️</div><div><b>Email</b><span>REPLACE_info@almadosafariskenya.com</span></div></div>
-      <div class="info-row"><div class="ic">📍</div><div><b>Based in</b><span>Nairobi, Kenya — serving the whole country</span></div></div>
-    </div>
-
-    <!-- Replace YOUR_FORM_ID with your Formspree ID (free at formspree.io) -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="row2">
-        <div class="field"><label for="name">Full name</label><input id="name" name="name" required></div>
-        <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" required></div>
+      <div class="sec-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Travel solutions, tailored to you</h2>
+        <p>Whether it's a business trip, a family vacation, or a once-in-a-lifetime safari, we handle the logistics so you can enjoy the journey.</p>
       </div>
-      <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required></div>
-      <div class="row2">
-        <div class="field"><label for="service">Service needed</label>
-          <select id="service" name="service">
-            <option>Airport Transfer</option><option>Safari Tour</option>
-            <option>Corporate Transport</option><option>Car Hire</option>
-            <option>Custom Travel</option><option>Other</option>
-          </select>
-        </div>
-        <div class="field"><label for="date">Travel date</label><input id="date" type="date" name="date"></div>
-      </div>
-      <div class="field"><label for="msg">Tell us about your trip</label><textarea id="msg" name="message" placeholder="Number of travellers, pickup location, destination..."></textarea></div>
-      <button type="submit" class="btn btn-gold">Send my request</button>
-      <p class="form-note">We typically reply within a few hours.</p>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="wrap">
-    <div class="foot-top">
-      <div class="brand">
-        <b style="font-family:'Fraunces',serif;font-size:1.2rem">Almado Safaris Kenya</b>
-        <span style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)">Almado Support Enterprise</span>
-        <p style="max-width:280px;margin-top:12px;font-size:.85rem">Your trusted travel and transportation partner in Kenya.</p>
-      </div>
-      <div class="foot-links">
-        <div><b>Services</b>
-          <a href="#services">Airport Transfers</a><a href="#services">Safari Tours</a>
-          <a href="#services">Corporate Transport</a><a href="#services">Car Hire</a>
-        </div>
-        <div><b>Company</b>
-          <a href="#destinations">Destinations</a><a href="#fleet">Our Fleet</a><a href="#contact">Contact</a>
-        </div>
-        <div><b>Contact</b>
-          <a href="https://wa.me/2547XXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="#contact">Request a quote</a>
-        </div>
+      <div class="grid">
+        <div class="card"><div class="ic">✈️</div><h3>Airport Transfers</h3><p>Punctual, comfortable pickups and drop-offs at JKIA, Wilson, and regional airports — day or night.</p></div>
+        <div class="card"><div class="ic">🦁</div><h3>Safari Tours</h3><p>Guided game drives to Maasai Mara, Amboseli, Tsavo and beyond, in 4x4 vehicles built for the terrain.</p></div>
+        <div class="card"><div class="ic">💼</div><h3>Corporate Transport</h3><p>Reliable staff shuttles, executive transfers, and event logistics for businesses and organisations.</p></div>
+        <div class="card"><div class="ic">🚗</div><h3>Car Hire</h3><p>Self-drive or chauffeured rentals — sedans, vans, and 4x4s — at flexible daily and weekly rates.</p></div>
+        <div class="card"><div class="ic">🗺️</div><h3>Custom Travel</h3><p>Bespoke itineraries combining cities, coast, and wilderness, planned around your dates and budget.</p></div>
+        <div class="card"><div class="ic">👨‍👩‍👧</div><h3>Family &amp; Group Trips</h3><p>Spacious vehicles and friendly drivers for vacations, school trips, and group getaways.</p></div>
       </div>
     </div>
-    <div class="copy">© <span id="yr"></span> Almado Support Enterprise · AlmadoSafarisKenya.com · All rights reserved.</div>
-  </div>
-</footer>
+  </section>
 
-<!-- FLOATING WHATSAPP BUTTON -->
-<a class="wa-float" href="https://wa.me/2547XXXXXXXX" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.821 11.821 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-</a>
+  <!-- DESTINATIONS -->
+  <section id="destinations">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Where we'll take you</span>
+        <h2>Kenya's most loved destinations</h2>
+        <p>From the great wildebeest migration to the foot of Kilimanjaro and the white sands of the coast.</p>
+      </div>
+      <!-- PHOTO: set each .dest background to a destination image (see css comment) -->
+      <div class="dest-grid">
+        <div class="dest"><span>Maasai Mara</span></div>
+        <div class="dest"><span>Amboseli</span></div>
+        <div class="dest"><span>Tsavo East &amp; West</span></div>
+        <div class="dest"><span>Diani &amp; the Coast</span></div>
+      </div>
+    </div>
+  </section>
 
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+  <!-- FLEET -->
+  <section class="fleet" id="fleet">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Our fleet</span>
+        <h2>The right vehicle for every journey</h2>
+        <p>Clean, insured, and regularly serviced — chosen to match your group size and route.</p>
+      </div>
+      <!-- PHOTO: replace each .ph background with a vehicle photo -->
+      <div class="fleet-grid">
+        <div class="vehicle"><div class="ph">PHOTO: 4x4 Land Cruiser</div><div class="body"><h3>Safari Land Cruiser</h3><p>Pop-up roof, 6–7 seats. Built for game drives and rough terrain.</p></div></div>
+        <div class="vehicle"><div class="ph">PHOTO: Tour Van</div><div class="body"><h3>Tour Van</h3><p>Comfortable seating for groups, ideal for city tours and transfers.</p></div></div>
+        <div class="vehicle"><div class="ph">PHOTO: Executive Sedan</div><div class="body"><h3>Executive Sedan</h3><p>Smart, air-conditioned rides for corporate and airport transfers.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="wrap">
+      <div class="trust-grid">
+        <div><div class="n">24/7</div><div class="l">Support &amp; availability</div></div>
+        <div><div class="n">100%</div><div class="l">Licensed &amp; insured</div></div>
+        <div><div class="n">5★</div><div class="l">Customer-first service</div></div>
+        <div><div class="n">All</div><div class="l">Kenya covered</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Request a quote</h2>
+        <p>Tell us where you're headed and we'll get back to you with a tailored quote. Prefer to talk? Reach us directly below.</p>
+        <div class="info-row"><div class="ic">💬</div><div><b>WhatsApp</b><span>REPLACE_+254 7XX XXX XXX</span></div></div>
+        <div class="info-row"><div class="ic">📞</div><div><b>Phone</b><span>REPLACE_+254 7XX XXX XXX</span></div></div>
+        <div class="info-row"><div class="ic">✉️</div><div><b>Email</b><span>REPLACE_info@almadosafariskenya.com</span></div></div>
+        <div class="info-row"><div class="ic">📍</div><div><b>Based in</b><span>Nairobi, Kenya — serving the whole country</span></div></div>
+      </div>
+
+      <!-- Replace YOUR_FORM_ID with your Formspree ID (free at formspree.io) -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="row2">
+          <div class="field"><label for="name">Full name</label><input id="name" name="name" required></div>
+          <div class="field"><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" required></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required></div>
+        <div class="row2">
+          <div class="field"><label for="service">Service needed</label>
+            <select id="service" name="service">
+              <option>Airport Transfer</option><option>Safari Tour</option>
+              <option>Corporate Transport</option><option>Car Hire</option>
+              <option>Custom Travel</option><option>Other</option>
+            </select>
+          </div>
+          <div class="field"><label for="date">Travel date</label><input id="date" type="date" name="date"></div>
+        </div>
+        <div class="field"><label for="msg">Tell us about your trip</label><textarea id="msg" name="message" placeholder="Number of travellers, pickup location, destination..."></textarea></div>
+        <button type="submit" class="btn btn-gold">Send my request</button>
+        <p class="form-note">We typically reply within a few hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="brand">
+          <b style="font-family:'Fraunces',serif;font-size:1.2rem">Almado Safaris Kenya</b>
+          <span style="font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)">Almado Support Enterprise</span>
+          <p style="max-width:280px;margin-top:12px;font-size:.85rem">Your trusted travel and transportation partner in Kenya.</p>
+        </div>
+        <div class="foot-links">
+          <div><b>Services</b>
+            <a href="#services">Airport Transfers</a><a href="#services">Safari Tours</a>
+            <a href="#services">Corporate Transport</a><a href="#services">Car Hire</a>
+          </div>
+          <div><b>Company</b>
+            <a href="#destinations">Destinations</a><a href="#fleet">Our Fleet</a><a href="#contact">Contact</a>
+          </div>
+          <div><b>Contact</b>
+            <a href="#" data-whatsapp target="_blank" rel="noopener">WhatsApp</a>
+            <a href="#contact">Request a quote</a>
+          </div>
+        </div>
+      </div>
+      <div class="copy">© <span id="yr"></span> Almado Support Enterprise · AlmadoSafarisKenya.com · All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a class="wa-float" href="#" data-whatsapp target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.821 11.821 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

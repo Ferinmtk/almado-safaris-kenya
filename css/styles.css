@@ -1,0 +1,173 @@
+/* ============================================================
+   Almado Safaris Kenya — Stylesheet
+   Almado Support Enterprise
+   ------------------------------------------------------------
+   Sections:
+   1. Design tokens (:root)
+   2. Base / reset
+   3. Layout helpers
+   4. Header & nav
+   5. Hero
+   6. Section shell
+   7. Services
+   8. Destinations
+   9. Fleet
+   10. Trust
+   11. Contact
+   12. Footer
+   13. Floating WhatsApp
+   14. Responsive & motion
+   ============================================================ */
+
+/* 1. Design tokens ----------------------------------------- */
+:root{
+  --ink:#16201c;        /* deep acacia shadow */
+  --ink-soft:#23302a;
+  --sand:#e8dcc4;       /* warm savannah sand */
+  --paper:#f7f3ea;      /* off-white */
+  --gold:#e0a23b;       /* savannah sun */
+  --clay:#b5462e;       /* maasai clay */
+  --sage:#7a8b6f;       /* muted scrub */
+  --muted:#9aa79a;
+  --line:#e3dccd;
+  --maxw:1120px;
+}
+
+/* 2. Base / reset ------------------------------------------ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.05;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* 3. Layout helpers ---------------------------------------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--clay)}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:999px;font-weight:600;font-size:1rem;cursor:pointer;border:0;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 8px 24px rgba(224,162,59,.28)}
+.btn-wa{background:#25d366;color:#04331a;box-shadow:0 8px 24px rgba(37,211,102,.25)}
+.btn-ghost{background:transparent;color:var(--paper);border:1.5px solid rgba(232,220,196,.35)}
+
+/* 4. Header & nav ------------------------------------------ */
+header{position:sticky;top:0;z-index:50;background:rgba(22,32,28,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(232,220,196,.12)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;flex-direction:column;color:var(--paper)}
+.brand b{font-family:'Fraunces',serif;font-size:1.15rem;letter-spacing:-.01em}
+.brand span{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{color:var(--sand);font-size:.92rem;font-weight:500;opacity:.85;transition:opacity .2s}
+.nav-links a:hover{opacity:1}
+.nav-cta{background:var(--gold);color:var(--ink)!important;padding:9px 18px;border-radius:999px;font-weight:600;opacity:1!important}
+.menu-btn{display:none;background:none;border:0;color:var(--paper);font-size:1.5rem;cursor:pointer}
+
+/* 5. Hero -------------------------------------------------- */
+.hero{position:relative;color:var(--paper);overflow:hidden;
+  /* PHOTO: replace gradient with: linear-gradient(rgba(22,32,28,.55),rgba(22,32,28,.85)),url('../assets/images/hero.jpg') center/cover; */
+  background:linear-gradient(180deg,#1c2a24 0%,#16201c 60%,#101713 100%)}
+.horizon{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.sun{position:absolute;right:12%;top:18%;width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle,var(--gold) 0%,#d98b2a 55%,transparent 72%);opacity:.85;filter:blur(.5px)}
+.ridge{position:absolute;left:0;right:0;bottom:0;height:140px;
+  background:radial-gradient(120% 100% at 50% 100%,var(--ink-soft) 0%,transparent 70%)}
+.hero-inner{position:relative;padding:96px 0 110px;max-width:760px}
+.hero h1{font-size:clamp(2.5rem,6vw,4.4rem);color:var(--paper)}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p{margin-top:22px;font-size:1.18rem;color:var(--sand);max-width:560px}
+.hero-actions{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+.hero-strip{position:relative;border-top:1px solid rgba(232,220,196,.14);background:rgba(16,23,19,.55)}
+.hero-strip .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;padding:18px 24px;color:var(--sand);font-size:.9rem}
+.hero-strip b{color:var(--gold);font-weight:600}
+
+/* 6. Section shell ----------------------------------------- */
+section{padding:84px 0}
+.sec-head{max-width:640px;margin-bottom:46px}
+.sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-top:12px}
+.sec-head p{margin-top:14px;color:#55615a;font-size:1.05rem}
+
+/* 7. Services ---------------------------------------------- */
+.services{background:var(--ink);color:var(--paper)}
+.services .sec-head h2{color:var(--paper)}
+.services .sec-head p{color:var(--sand)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--ink-soft);border:1px solid rgba(232,220,196,.1);border-radius:16px;padding:28px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--gold);transform:translateY(-4px)}
+.card .ic{width:44px;height:44px;border-radius:10px;background:rgba(224,162,59,.14);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
+.card h3{font-size:1.3rem;color:var(--paper);margin-bottom:8px}
+.card p{color:var(--sand);font-size:.95rem}
+
+/* 8. Destinations ------------------------------------------ */
+.dest-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dest{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;color:#fff;display:flex;align-items:flex-end;padding:18px;
+  /* PHOTO: background:linear-gradient(transparent,rgba(22,32,28,.8)),url('../assets/images/mara.jpg') center/cover; */
+  background:linear-gradient(160deg,#8a9a7d,#5f6e54)}
+.dest::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(22,32,28,.85))}
+.dest span{position:relative;z-index:1;font-family:'Fraunces',serif;font-size:1.25rem;font-weight:600}
+
+/* 9. Fleet ------------------------------------------------- */
+.fleet{background:var(--sand)}
+.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vehicle{background:var(--paper);border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(22,32,28,.07)}
+.vehicle .ph{aspect-ratio:16/10;background:#cabfa6 center/cover;display:flex;align-items:center;justify-content:center;color:#7c7058;font-size:.85rem;letter-spacing:.05em}
+.vehicle .body{padding:20px}
+.vehicle h3{font-size:1.15rem;margin-bottom:6px}
+.vehicle p{font-size:.9rem;color:#55615a}
+
+/* 10. Trust ------------------------------------------------ */
+.trust{background:var(--ink);color:var(--paper)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.trust .n{font-family:'Fraunces',serif;font-size:2.6rem;color:var(--gold);font-weight:700}
+.trust .l{color:var(--sand);font-size:.95rem;margin-top:6px}
+
+/* 11. Contact ---------------------------------------------- */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-info h2{font-size:clamp(1.9rem,4vw,2.8rem);margin:12px 0 18px}
+.contact-info p{color:#55615a;margin-bottom:24px}
+.info-row{display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line)}
+.info-row .ic{width:40px;height:40px;border-radius:10px;background:rgba(181,70,46,.1);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.info-row b{display:block;font-size:.95rem}
+.info-row span{font-size:.88rem;color:#55615a}
+form{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:0 10px 30px rgba(22,32,28,.06)}
+.field{margin-bottom:16px}
+label{display:block;font-size:.82rem;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid #d8cfba;border-radius:10px;font-family:inherit;font-size:.95rem;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:var(--gold)}
+textarea{resize:vertical;min-height:90px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn-gold{width:100%;justify-content:center;margin-top:6px}
+.form-note{font-size:.78rem;color:#7c7058;margin-top:12px;text-align:center}
+
+/* 12. Footer ----------------------------------------------- */
+footer{background:#101713;color:var(--sand);padding:54px 0 28px}
+.foot-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:28px;padding-bottom:30px;border-bottom:1px solid rgba(232,220,196,.12)}
+.foot-top .brand b{color:var(--paper)}
+.foot-links{display:flex;gap:40px;flex-wrap:wrap}
+.foot-links div b{color:var(--paper);font-size:.85rem;display:block;margin-bottom:10px}
+.foot-links a{display:block;font-size:.88rem;padding:3px 0;opacity:.8}
+.foot-links a:hover{opacity:1;color:var(--gold)}
+.copy{padding-top:24px;font-size:.8rem;opacity:.7}
+
+/* 13. Floating WhatsApp ------------------------------------ */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(37,211,102,.4);transition:transform .15s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* 14. Responsive & motion ---------------------------------- */
+@media(max-width:860px){
+  .nav-links{display:none}
+  .menu-btn{display:block}
+  .grid,.fleet-grid{grid-template-columns:1fr}
+  .dest-grid{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .contact-grid{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .sun{width:90px;height:90px;right:8%}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
