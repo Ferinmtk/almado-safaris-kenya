@@ -17,12 +17,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const yr = document.getElementById("yr");
   if (yr) yr.textContent = new Date().getFullYear();
 
-  // Wire all WhatsApp links from CONFIG
-  const waUrl =
-    `https://wa.me/${CONFIG.whatsapp}?text=` +
-    encodeURIComponent(CONFIG.whatsappMessage);
+  // Wire all WhatsApp links from CONFIG.
+  // Elements may set data-wa-msg for a custom prefilled message
+  // (e.g. per-vehicle booking links on the fleet page).
   document.querySelectorAll("[data-whatsapp]").forEach((el) => {
-    el.setAttribute("href", waUrl);
+    const msg = el.getAttribute("data-wa-msg") || CONFIG.whatsappMessage;
+    el.setAttribute(
+      "href",
+      `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`
+    );
   });
 
   // Mobile menu toggle

@@ -30,6 +30,35 @@ body.glass.bg-lions{
     url('../assets/images/lions-bg.jpg') center/cover fixed;
 }
 
+/* Per-page backdrop: fleet page rides with the sunset game drive */
+body.glass.bg-fleet{
+  background:
+    linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78)),
+    url('../assets/images/safari-drive.jpg') center/cover fixed;
+}
+
+/* Per-page backdrop: services under the sunset waterfall
+   PLACEHOLDER: Unsplash (Victoria Falls) — user may swap for a Kenyan falls photo */
+body.glass.bg-services{
+  background:
+    linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78)),
+    url('../assets/images/waterfall-bg.jpg') center/cover fixed;
+}
+
+/* Per-page backdrop: about rides the giraffe sunset */
+body.glass.bg-about{
+  background:
+    linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78)),
+    url('../assets/images/giraffe-sunset.jpg') center/cover fixed;
+}
+
+/* Per-page backdrop: contact rests on the Tsavo sunset */
+body.glass.bg-contact{
+  background:
+    linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78)),
+    url('../assets/images/tsavo-sunset.jpg') center/cover fixed;
+}
+
 /* Frosted header */
 body.glass header{
   background:rgba(255,255,255,.07);
@@ -50,6 +79,9 @@ body.glass .page-hero-inner{
   border:1px solid rgba(255,255,255,.18);
   box-shadow:0 18px 50px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.22);
 }
+/* Glass hero panel carries its own spacing, so the section after it
+   doesn't need the full 84px band — kills the dead-space gap */
+body.glass .page-hero + section{padding-top:44px}
 
 /* Homepage hero — floating glass panel + frosted checkmark strip */
 body.glass .hero{background:none}
@@ -157,6 +189,98 @@ body.glass .quote figcaption b{color:var(--paper)}
 body.glass .quote figcaption span{color:rgba(247,244,238,.6)}
 body.glass .step .num{box-shadow:0 6px 18px rgba(201,154,60,.4)}
 
+/* Service cards become frosted photo cards (services page) */
+body.glass .detail{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+  transition:transform .2s, border-color .2s;
+}
+body.glass .detail:hover{transform:translateY(-4px);border-color:rgba(201,154,60,.5)}
+body.glass .detail h3{color:var(--paper)}
+body.glass .detail p{color:rgba(247,244,238,.8)}
+body.glass .detail ul{color:rgba(247,244,238,.68)}
+body.glass .detail .ic{background:rgba(201,154,60,.16);border:1px solid rgba(201,154,60,.3)}
+body.glass .detail:target{
+  border-color:rgba(201,154,60,.75);
+  background:rgba(201,154,60,.14);
+}
+
+/* Vehicle cards become frosted tiles (fleet page) */
+body.glass .vehicle{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+  transition:transform .2s, border-color .2s;
+}
+body.glass .vehicle:hover{transform:translateY(-4px);border-color:rgba(201,154,60,.6)}
+body.glass .vehicle h3{color:var(--paper)}
+body.glass .vehicle p{color:rgba(247,244,238,.78)}
+
+/* Spec chips + booking links flip to light-on-dark */
+body.glass .chip{color:var(--gold);background:rgba(201,154,60,.14);border-color:rgba(201,154,60,.42)}
+body.glass .book-link{color:var(--gold)}
+
+/* Weddings band + interior tiles pick up the glass edge */
+body.glass .events-ph,
+body.glass .interior-grid .ph{
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.3);
+}
+body.glass .events-copy h2{color:var(--paper)}
+body.glass .events-copy p{color:rgba(247,244,238,.78)}
+
+/* About page: story grid, value tiles, brand note */
+body.glass .about-grid h2{color:var(--paper)}
+body.glass .about-grid p{color:rgba(247,244,238,.78)}
+body.glass .about-grid .ph{border:1px solid rgba(255,255,255,.16);box-shadow:0 12px 32px rgba(0,0,0,.3)}
+body.glass .value{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+}
+body.glass .value b{color:var(--paper)}
+body.glass .value p{color:rgba(247,244,238,.78)}
+body.glass .brand-note{color:rgba(247,244,238,.78)}
+
+/* Contact page: info rows + frosted form */
+body.glass .contact-info p{color:rgba(247,244,238,.78)}
+body.glass .info-row{border-top-color:rgba(255,255,255,.14)}
+body.glass .info-row span{color:rgba(247,244,238,.72)}
+body.glass .info-row .ic{background:rgba(201,154,60,.16);border:1px solid rgba(201,154,60,.3)}
+body.glass .contact-grid form{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+  border-radius:16px;padding:28px;
+}
+body.glass .field label{color:rgba(247,244,238,.85)}
+body.glass .field input,
+body.glass .field select,
+body.glass .field textarea{
+  background:rgba(10,16,30,.45);
+  border:1px solid rgba(255,255,255,.2);
+  color:var(--paper);
+}
+body.glass .field input:focus,
+body.glass .field select:focus,
+body.glass .field textarea:focus{border-color:rgba(201,154,60,.7);outline:none}
+body.glass .field select option{background:#141e34;color:var(--paper)}
+body.glass .form-note{color:rgba(247,244,238,.6)}
+
+/* FAQ rows on glass */
+body.glass .faq details{border-bottom-color:rgba(255,255,255,.14)}
+body.glass .faq summary{color:var(--paper)}
+body.glass .faq details p{color:rgba(247,244,238,.75)}
+
 /* Moments photo tiles pick up the glass edge treatment */
 
 body.glass .moment{
@@ -186,6 +310,10 @@ body.glass footer{
   body.glass .itin,
   body.glass .step,
   body.glass .quote,
+  body.glass .vehicle,
+  body.glass .value,
+  body.glass .contact-grid form,
+  body.glass .detail,
   body.glass .dest{background:rgba(20,30,52,.88)}
   body.glass footer{background:rgba(10,16,30,.92)}
 }

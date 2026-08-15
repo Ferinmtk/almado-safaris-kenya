@@ -112,12 +112,47 @@ section{padding:84px 0}
 
 /* 9. Fleet ------------------------------------------------- */
 .fleet{background:var(--sand)}
-.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fleet-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:960px;margin:0 auto}
 .vehicle{background:var(--paper);border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(22,32,28,.07)}
 .vehicle .ph{aspect-ratio:16/10;background:#cabfa6 center/cover;display:flex;align-items:center;justify-content:center;color:#7c7058;font-size:.85rem;letter-spacing:.05em}
 .vehicle .body{padding:20px}
 .vehicle h3{font-size:1.15rem;margin-bottom:6px}
 .vehicle p{font-size:.9rem;color:#55615a}
+
+/* Fleet: spec chips + per-vehicle WhatsApp booking link */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+.chip{font-size:.72rem;letter-spacing:.04em;padding:4px 11px;border-radius:999px;
+  border:1px solid rgba(201,154,60,.5);color:#8a6a25;background:rgba(201,154,60,.08);white-space:nowrap}
+.book-link{display:inline-block;margin-top:12px;font-size:.88rem;font-weight:600;color:var(--gold);
+  text-decoration:none;border-bottom:1px solid rgba(201,154,60,.4)}
+.book-link:hover{border-bottom-color:var(--gold)}
+
+/* Fleet: weddings & events band */
+.events-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center;max-width:960px;margin:0 auto}
+.events-ph{aspect-ratio:4/5;border-radius:16px;background:center/cover;box-shadow:0 12px 32px rgba(22,32,28,.12)}
+.events-copy h2{font-size:1.7rem;margin-bottom:12px}
+.events-copy p{color:#55615a;margin-bottom:8px}
+
+/* Fleet: interior proof strip */
+.interior-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:960px;margin:0 auto}
+.interior-grid .ph{aspect-ratio:16/10;border-radius:16px;background:center/cover;box-shadow:0 12px 32px rgba(22,32,28,.12)}
+
+/* Fleet: standards line under trust strip */
+.standards{margin-top:26px;text-align:center;font-size:.88rem;color:var(--sand);opacity:.85}
+
+/* Fleet: mini FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq details{border-bottom:1px solid rgba(22,32,28,.12);padding:16px 4px}
+.faq summary{cursor:pointer;font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.3rem;font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin-top:10px;font-size:.92rem;color:#55615a;max-width:640px}
+
+@media(max-width:860px){
+  .events-grid{grid-template-columns:1fr}
+  .events-ph{aspect-ratio:16/11}
+  .interior-grid{grid-template-columns:1fr}
+}
 
 /* 10. Trust ------------------------------------------------ */
 .trust{background:var(--ink);color:var(--paper)}
@@ -198,13 +233,19 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 .page-hero p{margin-top:16px;font-size:1.1rem;color:var(--sand);max-width:560px}
 
 /* Service detail rows (services page) */
-.detail{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:30px 0;border-top:1px solid var(--line)}
-.detail:first-of-type{border-top:0}
-.detail .ic{width:60px;height:60px;border-radius:14px;background:rgba(224,162,59,.14);display:flex;align-items:center;justify-content:center;font-size:1.7rem}
-.detail h3{font-size:1.45rem;margin-bottom:8px}
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.detail{border-radius:16px;overflow:hidden;background:var(--paper);border:1px solid var(--line);
+  display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(22,32,28,.07)}
+.detail .photo{aspect-ratio:16/9;background:#cabfa6 center/cover}
+.detail .dbody{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
+.detail .dhead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.detail .ic{width:46px;height:46px;flex:0 0 auto;border-radius:12px;background:rgba(224,162,59,.14);
+  display:flex;align-items:center;justify-content:center}
+.detail h3{font-size:1.3rem}
 .detail p{color:#55615a}
-.detail ul{margin:12px 0 0 0;padding-left:18px;color:#55615a;font-size:.95rem}
+.detail ul{margin:12px 0 0 0;padding-left:18px;color:#55615a;font-size:.92rem}
 .detail li{margin-bottom:4px}
+.detail .book-link{margin-top:auto;padding-top:16px;align-self:flex-start}
 
 /* Itinerary cards (safaris page) */
 .itin{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;margin-bottom:18px;box-shadow:0 6px 20px rgba(22,32,28,.05)}
@@ -226,7 +267,7 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 .value p{font-size:.9rem;color:#55615a}
 
 @media(max-width:860px){
-  .detail{grid-template-columns:1fr}
+  .services-grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
   .values{grid-template-columns:1fr}
 }
@@ -245,6 +286,7 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 
 /* About logo block */
 .about-logo{max-width:300px;margin:0 auto 8px}
+.brand-note{color:#55615a;margin-top:8px}
 
 /* Photo heroes don't need the decorative sun overlay */
 .hero .horizon, .page-hero .horizon{display:none}
@@ -350,6 +392,9 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 .moment::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,16,30,.7));pointer-events:none}
 .moment span{position:absolute;left:16px;bottom:13px;z-index:1;color:#fff;
   font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+
+/* Service detail rows: gold line icons */
+.detail .ic svg{width:28px;height:28px;fill:none;stroke:var(--gold);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 
 /* Deep links from homepage cards land cleanly on service rows */
 .detail[id]{scroll-margin-top:92px}

@@ -5,13 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Fleet — Almado Safaris Kenya</title>
   <meta name="description" content="Clean, insured, well-maintained vehicles for every kind of trip in Kenya.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Fleet — Almado Safaris Kenya">
+  <meta property="og:description" content="Clean, insured, well-maintained vehicles for every kind of trip in Kenya.">
+  <meta property="og:url" content="https://almadosafariskenya.com/fleet.html">
+  <meta property="og:image" content="https://almadosafariskenya.com/assets/images/fleet-safari-van.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=22">
+  <link rel="stylesheet" href="css/glass.css?v=22">
 </head>
-<body>
+<body class="glass bg-fleet">
   <header>
     <div class="wrap nav">
       <a href="index.html" class="brand">
@@ -39,23 +46,75 @@
   </section>
 
   <section><div class="wrap">
+    <!-- Real fleet photos (June 2026 batch); fleet-sedan.jpg is a crop of the
+         Ford Fusion from wa0044 — swap for a dedicated clean shot when available -->
     <div class="fleet-grid">
-      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/van-silver.jpg')"></div><div class="body"><h3>Almado Safari Van</h3><p>Our branded 7-seater — spacious and comfortable, ideal for airport transfers and safari tours.</p></div></div>
-      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/van-white.jpg')"></div><div class="body"><h3>Tour &amp; Group Van</h3><p>Roomy seating for families and groups, with ample luggage space for longer trips.</p></div></div>
-      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/sedan.jpg')"></div><div class="body"><h3>Executive Sedan</h3><p>Smart, air-conditioned comfort for corporate and individual airport transfers.</p></div></div>
-      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/van-front.jpg')"></div><div class="body"><h3>City &amp; Transfer Van</h3><p>Reliable everyday transport around Nairobi and beyond, day or night.</p></div></div>
-      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/interior.jpg')"></div><div class="body"><h3>Comfortable Interiors</h3><p>Clean, well-kept cabins so every passenger travels in comfort.</p></div></div>
-      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/airport.jpg')"></div><div class="body"><h3>Airport Ready</h3><p>Punctual pickups and drop-offs at JKIA Terminal 1-A and all Nairobi airports.</p></div></div>
+      <!-- PLACEHOLDER: confirm seat/luggage counts per vehicle before launch -->
+      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/fleet-safari-van.jpg')"></div><div class="body"><h3>Almado Safari Van</h3>
+        <div class="chips"><span class="chip">7 seats</span><span class="chip">A/C</span><span class="chip">5 bags</span><span class="chip">Best for: safaris &amp; JKIA</span></div>
+        <p>Our branded 7-seater — spacious and comfortable, ideal for airport transfers and safari tours.</p>
+        <a class="book-link" href="#" data-whatsapp data-wa-msg="Hello Almado Safaris Kenya, I'd like to check availability for the Almado Safari Van." target="_blank" rel="noopener">Book this van &rarr;</a></div></div>
+      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/fleet-group-van.jpg')"></div><div class="body"><h3>Tour &amp; Group Van</h3>
+        <div class="chips"><span class="chip">7 seats</span><span class="chip">A/C</span><span class="chip">Ample luggage</span><span class="chip">Best for: families &amp; groups</span></div>
+        <p>Roomy seating for families and groups, with ample luggage space for longer trips.</p>
+        <a class="book-link" href="#" data-whatsapp data-wa-msg="Hello Almado Safaris Kenya, I'd like to check availability for the Tour & Group Van." target="_blank" rel="noopener">Book this van &rarr;</a></div></div>
+      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/fleet-sedan.jpg')"></div><div class="body"><h3>Executive Sedan</h3>
+        <div class="chips"><span class="chip">4 passengers</span><span class="chip">A/C</span><span class="chip">Best for: corporate transfers</span></div>
+        <p>Smart, air-conditioned comfort for corporate and individual airport transfers.</p>
+        <a class="book-link" href="#" data-whatsapp data-wa-msg="Hello Almado Safaris Kenya, I'd like to check availability for the Executive Sedan." target="_blank" rel="noopener">Book this sedan &rarr;</a></div></div>
+      <div class="vehicle"><div class="ph" style="background-image:url('assets/images/fleet-transfer-van.jpg')"></div><div class="body"><h3>City &amp; Transfer Van</h3>
+        <div class="chips"><span class="chip">7 seats</span><span class="chip">A/C</span><span class="chip">Best for: city trips, day &amp; night</span></div>
+        <p>Reliable everyday transport around Nairobi and beyond, day or night.</p>
+        <a class="book-link" href="#" data-whatsapp data-wa-msg="Hello Almado Safaris Kenya, I'd like to check availability for the City & Transfer Van." target="_blank" rel="noopener">Book this van &rarr;</a></div></div>
     </div>
     <div style="text-align:center;margin-top:40px"><a href="contact.html" class="btn btn-gold">Check availability</a></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="events-grid">
+      <div class="events-ph" style="background-image:url('assets/images/fleet-wedding.jpg')"></div>
+      <div class="events-copy">
+        <span class="eyebrow" style="color:var(--gold)">Weddings &amp; events</span>
+        <h2>Arrive in style on the big day.</h2>
+        <p>Our decorated sedan and van pairing has carried bridal parties across Nairobi — polished vehicles, suited drivers, and timing you can rely on.</p>
+        <p>We dress the vehicles to match your colours and coordinate multi-car convoys for the whole party.</p>
+        <a class="book-link" href="#" data-whatsapp data-wa-msg="Hello Almado Safaris Kenya, I'd like to ask about wedding & event transport." target="_blank" rel="noopener">Ask about event transport &rarr;</a>
+      </div>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap">
+    <div class="sec-head" style="text-align:center;margin:0 auto 26px"><h2>Clean inside, every trip.</h2></div>
+    <div class="interior-grid">
+      <div class="ph" style="background-image:url('assets/images/fleet-interior-1.jpg')"></div>
+      <div class="ph" style="background-image:url('assets/images/fleet-interior-2.jpg')"></div>
+    </div>
   </div></section>
 
   <section class="trust"><div class="wrap"><div class="trust-grid">
     <div><div class="n">&#10003;</div><div class="l">Fully insured</div></div>
     <div><div class="n">&#10003;</div><div class="l">Regularly serviced</div></div>
     <div><div class="n">&#10003;</div><div class="l">Experienced drivers</div></div>
-    <div><div class="n">&#10003;</div><div class="l">Clean &amp; comfortable</div></div>
-  </div></div></section>
+    <div><div class="n">&#10003;</div><div class="l">Airport ready &middot; JKIA T1-A</div></div>
+  </div>
+  <!-- PLACEHOLDER: confirm PSV licensing + safety kit claims before launch -->
+  <p class="standards">Every vehicle is inspected before each trip and carries a first aid kit and fire extinguisher &middot; PSV-licensed drivers.</p>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-head" style="text-align:center;margin:0 auto 26px"><h2>Good to know</h2></div>
+    <!-- PLACEHOLDER: verify FAQ answers (driver/fuel policy, child seats) before launch -->
+    <div class="faq">
+      <details><summary>Do vehicles come with a driver?</summary>
+        <p>Yes — all hires are chauffeur-driven by our experienced drivers. Self-drive can be arranged on request for selected vehicles.</p></details>
+      <details><summary>Is fuel included in the price?</summary>
+        <p>Quotes for agreed itineraries include fuel and driver. Long-distance and multi-day trips are quoted per route — ask us on WhatsApp for a quick estimate.</p></details>
+      <details><summary>Do you do night and early-morning transfers?</summary>
+        <p>Yes, we operate 24/7 and track your flight, so we're at arrivals even when your plane is early or late.</p></details>
+      <details><summary>Can you provide child seats?</summary>
+        <p>Yes — let us know the ages when booking and we'll fit appropriate child seats at no extra charge.</p></details>
+    </div>
+  </div></section>
   <footer>
     <div class="wrap">
       <div class="foot-top">
@@ -66,8 +125,8 @@
         </div>
         <div class="foot-links">
           <div><b>Services</b>
-            <a href="services.html">Airport Transfers</a><a href="services.html">Safari Tours</a>
-            <a href="services.html">Corporate Transport</a><a href="services.html">Car Hire</a>
+            <a href="services.html#airport-transfers">Airport Transfers</a><a href="safaris.html">Safari Tours</a>
+            <a href="services.html#corporate-transport">Corporate Transport</a><a href="services.html#car-hire">Car Hire</a>
           </div>
           <div><b>Company</b>
             <a href="safaris.html">Safaris</a><a href="fleet.html">Our Fleet</a><a href="about.html">About</a><a href="contact.html">Contact</a>
