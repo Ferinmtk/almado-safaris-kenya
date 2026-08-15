@@ -9,10 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=9">
-  <link rel="stylesheet" href="css/glass.css?v=9">
+  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="stylesheet" href="css/glass.css?v=11">
 </head>
-<body class="glass">
+<body class="glass bg-lions">
   <header>
     <div class="wrap nav">
       <a href="index.html" class="brand">
@@ -53,34 +53,40 @@
     </div>
   </div></section>
 
-  <section><div class="wrap" style="max-width:840px">
+  <section><div class="wrap">
     <div class="sec-head"><span class="eyebrow">The classic route</span><h2>A typical safari, airport to airport</h2>
       <p>Most of our guests follow a loop like this. Use it as a template — we stretch or shrink every leg to fit your dates.</p></div>
-    <div class="timeline">
-      <div class="tl-item"><div class="tl-marker">1</div><div class="tl-card has-ph">
-        <div class="tl-text"><span class="tl-day">Day 1 &middot; Arrival &middot; Nairobi</span><h3>Touchdown at JKIA</h3>
-        <p>Your driver meets you in arrivals, sign in hand, whatever time you land. Check in, shake off the flight, and get a briefing on the days ahead over dinner.</p></div>
-        <div class="tl-ph" style="background-image:url('assets/images/route-arrival.jpg')"></div></div></div>
-      <div class="tl-item"><div class="tl-marker">2</div><div class="tl-card has-ph">
-        <div class="tl-text"><span class="tl-day">Day 2 &middot; Nairobi &rarr; Maasai Mara</span><h3>Into the Great Rift Valley</h3>
-        <p>An early start west, with a photo stop on the Rift Valley escarpment. Arrive in the Mara by lunch — your first game drive starts the same afternoon.</p></div>
-        <div class="tl-ph" style="background-image:url('assets/images/route-riftvalley.jpg')"></div></div></div>
-      <div class="tl-item"><div class="tl-marker">3</div><div class="tl-card has-ph">
-        <div class="tl-text"><span class="tl-day">Day 3 &middot; Maasai Mara</span><h3>A full day among the Big Five</h3>
-        <p>Dawn game drive when the cats are hunting, picnic lunch under an acacia, and out again until sunset. Optional: a hot-air balloon flight over the plains at first light.</p></div>
-        <div class="tl-ph" style="background-image:url('assets/images/route-balloons.jpg')"></div></div></div>
-      <div class="tl-item"><div class="tl-marker">4</div><div class="tl-card has-ph">
-        <div class="tl-text"><span class="tl-day">Day 4 &middot; Mara &rarr; Amboseli</span><h3>Elephants under Kilimanjaro</h3>
-        <p>Cross country to Amboseli for the classic shot — elephant herds with Africa's highest peak behind them. Sundowner at the lodge as Kili turns pink.</p></div>
-        <div class="tl-ph" style="background-image:url('assets/images/route-sundowner.jpg')"></div></div></div>
-      <div class="tl-item"><div class="tl-marker">5</div><div class="tl-card has-ph">
-        <div class="tl-text"><span class="tl-day">Day 5 &middot; Optional &middot; The Coast</span><h3>Trade dust for ocean</h3>
-        <p>Add a few days on Diani's white sand to unwind after the parks — or head back to Nairobi for giraffe centre visits and souvenir shopping.</p></div>
-        <div class="tl-ph" style="background-image:url('assets/images/route-beach.jpg')"></div></div></div>
-      <div class="tl-item"><div class="tl-marker">&#10003;</div><div class="tl-card has-ph">
-        <div class="tl-text"><span class="tl-day">Final day &middot; Departure</span><h3>Back to JKIA, memory cards full</h3>
-        <p>We time the return drive around Nairobi traffic and your flight, with a stop for last-minute gifts if you want one. Karibu tena — welcome back anytime.</p></div>
-        <div class="tl-ph" style="background-image:url('assets/images/route-departure.jpg')"></div></div></div>
+    <div class="route-grid">
+      <div class="rt wide" style="background-image:url('assets/images/route-arrival.jpg')">
+        <span class="rt-num">1</span>
+        <div class="rt-body"><span class="rt-day">Day 1 &middot; Arrival &middot; Nairobi</span><h3>Touchdown at JKIA</h3>
+          <p>Your driver waits in arrivals, sign in hand — then it's the hotel, dinner, and a briefing on the days ahead.</p></div>
+      </div>
+      <div class="rt" style="background-image:url('assets/images/route-riftvalley.jpg')">
+        <span class="rt-num">2</span>
+        <div class="rt-body"><span class="rt-day">Day 2 &middot; To the Mara</span><h3>Into the Great Rift Valley</h3>
+          <p>Photo stop on the escarpment; first game drive by afternoon.</p></div>
+      </div>
+      <div class="rt" style="background-image:url('assets/images/route-balloons.jpg')">
+        <span class="rt-num">3</span>
+        <div class="rt-body"><span class="rt-day">Day 3 &middot; Maasai Mara</span><h3>A full day among the Big Five</h3>
+          <p>Dawn drive, picnic under an acacia — balloons at first light, if you dare.</p></div>
+      </div>
+      <div class="rt wide" style="background-image:url('assets/images/route-sundowner.jpg')">
+        <span class="rt-num">4</span>
+        <div class="rt-body"><span class="rt-day">Day 4 &middot; Mara &rarr; Amboseli</span><h3>Elephants under Kilimanjaro</h3>
+          <p>Cross country for the classic shot, then a sundowner at the lodge as Kili turns pink.</p></div>
+      </div>
+      <div class="rt wide" style="background-image:url('assets/images/route-beach.jpg')">
+        <span class="rt-num">5</span>
+        <div class="rt-body"><span class="rt-day">Day 5 &middot; Optional &middot; The Coast</span><h3>Trade dust for ocean</h3>
+          <p>Unwind on Diani's white sand — or spend the day in Nairobi's markets and the giraffe centre.</p></div>
+      </div>
+      <div class="rt" style="background-image:url('assets/images/route-departure.jpg')">
+        <span class="rt-num">&#10003;</span>
+        <div class="rt-body"><span class="rt-day">Final day &middot; Departure</span><h3>Back to JKIA</h3>
+          <p>Return timed around traffic and your flight. Karibu tena.</p></div>
+      </div>
     </div>
   </div></section>
 

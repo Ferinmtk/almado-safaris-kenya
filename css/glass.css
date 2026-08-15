@@ -23,6 +23,13 @@ body.glass.has-video::before{
   background:linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78));
 }
 
+/* Per-page backdrop: lions (safaris page) */
+body.glass.bg-lions{
+  background:
+    linear-gradient(rgba(13,22,40,.6), rgba(13,22,40,.8)),
+    url('../assets/images/lions-bg.jpg') center/cover fixed;
+}
+
 /* Frosted header */
 body.glass header{
   background:rgba(255,255,255,.07);
@@ -150,19 +157,13 @@ body.glass .quote figcaption b{color:var(--paper)}
 body.glass .quote figcaption span{color:rgba(247,244,238,.6)}
 body.glass .step .num{box-shadow:0 6px 18px rgba(201,154,60,.4)}
 
-/* Journey timeline — frosted cards on the gold rail */
-body.glass .tl-card{
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(16px) saturate(150%);
-  -webkit-backdrop-filter:blur(16px) saturate(150%);
+/* Route + moments photo tiles pick up the glass edge treatment */
+body.glass .rt{
   border:1px solid rgba(255,255,255,.16);
-  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+  box-shadow:0 12px 32px rgba(0,0,0,.3);
 }
-body.glass .tl-card h3{color:var(--paper)}
-body.glass .tl-card p{color:rgba(247,244,238,.78)}
-body.glass .tl-day{color:var(--gold)}
+body.glass .rt:hover{border-color:rgba(201,154,60,.6)}
 
-/* Moments mosaic tiles pick up the glass edge treatment */
 body.glass .moment{
   border:1px solid rgba(255,255,255,.16);
   box-shadow:0 12px 32px rgba(0,0,0,.3);
@@ -190,7 +191,6 @@ body.glass footer{
   body.glass .itin,
   body.glass .step,
   body.glass .quote,
-  body.glass .tl-card,
   body.glass .dest{background:rgba(20,30,52,.88)}
   body.glass footer{background:rgba(10,16,30,.92)}
 }
