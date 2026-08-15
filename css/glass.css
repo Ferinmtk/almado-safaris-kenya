@@ -75,7 +75,10 @@ body.glass .card{
   box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
 }
 body.glass .card:hover{border-color:rgba(201,154,60,.65)}
-body.glass .card .ic{background:rgba(201,154,60,.2);border:1px solid rgba(201,154,60,.3)}
+body.glass .card .ic{background:rgba(201,154,60,.16);border:1px solid rgba(201,154,60,.3)}
+body.glass .card:hover .ic{background:rgba(201,154,60,.28)}
+body.glass .card h3{color:var(--paper)}
+body.glass .card p{color:rgba(247,244,238,.78)}
 
 /* Trust stats — slim glass tiles */
 body.glass .trust{background:transparent}
@@ -130,6 +133,41 @@ body.glass .itin .tag{
   border:1px solid rgba(201,154,60,.35);
 }
 
+/* How-it-works steps + testimonial quotes — frosted tiles */
+body.glass .step,
+body.glass .quote{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+}
+body.glass .step h3,
+body.glass .quote blockquote{color:var(--paper)}
+body.glass .step p{color:rgba(247,244,238,.78)}
+body.glass .quote blockquote{color:rgba(247,244,238,.88)}
+body.glass .quote figcaption b{color:var(--paper)}
+body.glass .quote figcaption span{color:rgba(247,244,238,.6)}
+body.glass .step .num{box-shadow:0 6px 18px rgba(201,154,60,.4)}
+
+/* Journey timeline — frosted cards on the gold rail */
+body.glass .tl-card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+}
+body.glass .tl-card h3{color:var(--paper)}
+body.glass .tl-card p{color:rgba(247,244,238,.78)}
+body.glass .tl-day{color:var(--gold)}
+
+/* Moments mosaic tiles pick up the glass edge treatment */
+body.glass .moment{
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.3);
+}
+
 /* Gold button gets a glassy glow */
 body.glass .btn-gold{box-shadow:0 8px 30px rgba(201,154,60,.45)}
 
@@ -150,6 +188,9 @@ body.glass footer{
   body.glass .card,
   body.glass .trust-grid>div,
   body.glass .itin,
+  body.glass .step,
+  body.glass .quote,
+  body.glass .tl-card,
   body.glass .dest{background:rgba(20,30,52,.88)}
   body.glass footer{background:rgba(10,16,30,.92)}
 }
