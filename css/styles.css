@@ -234,8 +234,13 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 
 /* Service detail rows (services page) */
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.detail{border-radius:16px;overflow:hidden;background:var(--paper);border:1px solid var(--line);
+.detail{position:relative;border-radius:16px;overflow:hidden;background:var(--paper);border:1px solid var(--line);
   display:flex;flex-direction:column;box-shadow:0 6px 20px rgba(22,32,28,.07)}
+.most-booked{position:absolute;top:14px;left:14px;z-index:1;background:var(--gold);color:var(--ink);
+  font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  padding:5px 12px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.pricing-note{text-align:center;margin-top:14px;font-size:.9rem;color:#55615a}
+.fine-print{max-width:760px;margin:0 auto;text-align:center;font-size:.88rem;color:#7c7058;line-height:1.6}
 .detail .photo{aspect-ratio:16/9;background:#cabfa6 center/cover}
 .detail .dbody{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
 .detail .dhead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
