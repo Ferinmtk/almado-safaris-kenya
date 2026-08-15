@@ -203,6 +203,24 @@ body.glass .vehicle:hover{transform:translateY(-4px);border-color:rgba(201,154,6
 body.glass .vehicle h3{color:var(--paper)}
 body.glass .vehicle p{color:rgba(247,244,238,.78)}
 
+/* Spec chips + booking links flip to light-on-dark */
+body.glass .chip{color:var(--gold);background:rgba(201,154,60,.14);border-color:rgba(201,154,60,.42)}
+body.glass .book-link{color:var(--gold)}
+
+/* Weddings band + interior tiles pick up the glass edge */
+body.glass .events-ph,
+body.glass .interior-grid .ph{
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.3);
+}
+body.glass .events-copy h2{color:var(--paper)}
+body.glass .events-copy p{color:rgba(247,244,238,.78)}
+
+/* FAQ rows on glass */
+body.glass .faq details{border-bottom-color:rgba(255,255,255,.14)}
+body.glass .faq summary{color:var(--paper)}
+body.glass .faq details p{color:rgba(247,244,238,.75)}
+
 /* Moments photo tiles pick up the glass edge treatment */
 
 body.glass .moment{

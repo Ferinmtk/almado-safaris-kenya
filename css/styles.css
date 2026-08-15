@@ -119,6 +119,41 @@ section{padding:84px 0}
 .vehicle h3{font-size:1.15rem;margin-bottom:6px}
 .vehicle p{font-size:.9rem;color:#55615a}
 
+/* Fleet: spec chips + per-vehicle WhatsApp booking link */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+.chip{font-size:.72rem;letter-spacing:.04em;padding:4px 11px;border-radius:999px;
+  border:1px solid rgba(201,154,60,.5);color:#8a6a25;background:rgba(201,154,60,.08);white-space:nowrap}
+.book-link{display:inline-block;margin-top:12px;font-size:.88rem;font-weight:600;color:var(--gold);
+  text-decoration:none;border-bottom:1px solid rgba(201,154,60,.4)}
+.book-link:hover{border-bottom-color:var(--gold)}
+
+/* Fleet: weddings & events band */
+.events-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:center;max-width:960px;margin:0 auto}
+.events-ph{aspect-ratio:4/5;border-radius:16px;background:center/cover;box-shadow:0 12px 32px rgba(22,32,28,.12)}
+.events-copy h2{font-size:1.7rem;margin-bottom:12px}
+.events-copy p{color:#55615a;margin-bottom:8px}
+
+/* Fleet: interior proof strip */
+.interior-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:960px;margin:0 auto}
+.interior-grid .ph{aspect-ratio:16/10;border-radius:16px;background:center/cover;box-shadow:0 12px 32px rgba(22,32,28,.12)}
+
+/* Fleet: standards line under trust strip */
+.standards{margin-top:26px;text-align:center;font-size:.88rem;color:var(--sand);opacity:.85}
+
+/* Fleet: mini FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq details{border-bottom:1px solid rgba(22,32,28,.12);padding:16px 4px}
+.faq summary{cursor:pointer;font-weight:600;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::after{content:"+";color:var(--gold);font-size:1.3rem;font-weight:400}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin-top:10px;font-size:.92rem;color:#55615a;max-width:640px}
+
+@media(max-width:860px){
+  .events-grid{grid-template-columns:1fr}
+  .events-ph{aspect-ratio:16/11}
+  .interior-grid{grid-template-columns:1fr}
+}
+
 /* 10. Trust ------------------------------------------------ */
 .trust{background:var(--ink);color:var(--paper)}
 .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
