@@ -165,6 +165,8 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
   .grid,.fleet-grid,.steps,.quote-grid{grid-template-columns:1fr}
   .dest-grid{grid-template-columns:1fr 1fr}
   .itin.has-photo{grid-template-columns:1fr}
+  .tl-card.has-ph{grid-template-columns:1fr}
+  .tl-ph{order:-1;min-height:150px}
   .itin-ph{min-height:190px}
   .moments{grid-template-columns:1fr}
   .moment.wide{grid-column:auto}
@@ -308,6 +310,8 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 .tl-day{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--clay)}
 .tl-card h3{font-size:1.25rem;margin:6px 0 8px}
 .tl-card p{font-size:.95rem;color:#55615a}
+.tl-card.has-ph{display:grid;grid-template-columns:1fr 190px;gap:20px}
+.tl-ph{border-radius:12px;background-size:cover;background-position:center;min-height:140px}
 
 /* Moments photo mosaic */
 .moments{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
