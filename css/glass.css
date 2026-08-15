@@ -276,6 +276,10 @@ body.glass .field textarea:focus{border-color:rgba(201,154,60,.7);outline:none}
 body.glass .field select option{background:#141e34;color:var(--paper)}
 body.glass .form-note{color:rgba(247,244,238,.6)}
 
+/* Services page: pricing note + SEO fine print */
+body.glass .pricing-note{color:rgba(247,244,238,.75)}
+body.glass .fine-print{color:rgba(247,244,238,.55)}
+
 /* FAQ rows on glass */
 body.glass .faq details{border-bottom-color:rgba(255,255,255,.14)}
 body.glass .faq summary{color:var(--paper)}
@@ -321,4 +325,7 @@ body.glass footer{
 @media(max-width:860px){
   body.glass .page-hero-inner{margin:24px 16px 0;padding:32px 24px}
   body.glass .hero-inner{margin:24px 16px 24px;padding:36px 26px}
+  /* iOS Safari doesn't support fixed backgrounds — avoid stretched/janky
+     rendering on phones by letting the backdrop scroll */
+  body.glass{background-attachment:scroll!important}
 }
