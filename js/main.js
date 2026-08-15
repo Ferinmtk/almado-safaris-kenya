@@ -7,7 +7,7 @@
 
 const CONFIG = {
   // WhatsApp number in international format, digits only (no + or spaces)
-  whatsapp: "2547XXXXXXXX",        // e.g. "254712345678"
+  whatsapp: "254104620917",
   // Default prefilled WhatsApp message
   whatsappMessage: "Hello Almado Safaris Kenya, I'd like to plan a trip.",
 };
