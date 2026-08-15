@@ -296,7 +296,7 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 .card:hover .more{opacity:1;letter-spacing:.03em}
 
 /* Route showcase (safaris page) — full-bleed interactive day switcher */
-.route-show{position:relative;min-height:78vh;display:flex;align-items:center;overflow:hidden;padding:0}
+.route-show{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:0}
 .rs-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .8s ease}
 .rs-bg.active{opacity:1}
 .route-show::after{content:"";position:absolute;inset:0;
