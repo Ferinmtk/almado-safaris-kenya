@@ -37,6 +37,14 @@ body.glass.bg-fleet{
     url('../assets/images/safari-drive.jpg') center/cover fixed;
 }
 
+/* Per-page backdrop: services under the sunset waterfall
+   PLACEHOLDER: Unsplash (Victoria Falls) — user may swap for a Kenyan falls photo */
+body.glass.bg-services{
+  background:
+    linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78)),
+    url('../assets/images/waterfall-bg.jpg') center/cover fixed;
+}
+
 /* Per-page backdrop: about rides the giraffe sunset */
 body.glass.bg-about{
   background:
