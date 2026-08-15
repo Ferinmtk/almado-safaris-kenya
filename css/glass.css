@@ -328,4 +328,9 @@ body.glass footer{
   /* iOS Safari doesn't support fixed backgrounds — avoid stretched/janky
      rendering on phones by letting the backdrop scroll */
   body.glass{background-attachment:scroll!important}
+  /* Opened mobile menu matches the glass navy */
+  body.glass .nav-links.open{
+    background:#0e1930;
+    border-bottom-color:rgba(255,255,255,.14);
+  }
 }
