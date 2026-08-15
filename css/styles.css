@@ -162,8 +162,19 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 @media(max-width:860px){
   .nav-links{display:none}
   .menu-btn{display:block}
-  .grid,.fleet-grid{grid-template-columns:1fr}
+  .grid,.fleet-grid,.steps,.quote-grid{grid-template-columns:1fr}
   .dest-grid{grid-template-columns:1fr 1fr}
+  .itin.has-photo{grid-template-columns:1fr}
+  .rs-inner{flex-direction:column;align-items:flex-start;gap:22px;padding-top:56px;padding-bottom:56px}
+  .rs-rail{flex-direction:row;gap:12px}
+  .rs-rail::before{top:50%;bottom:auto;left:8px;right:8px;width:auto;height:2px;transform:translateY(-50%)}
+  .rs-content{flex-basis:auto}
+  .rs-right{margin-left:0;width:100%}
+  .rs-thumb{flex-basis:110px;height:150px}
+  .rs-thumb.active{flex-basis:130px;height:172px}
+  .itin-ph{min-height:190px}
+  .moments{grid-template-columns:1fr;grid-auto-rows:220px}
+  .moment.wide{grid-column:auto}
   .trust-grid{grid-template-columns:1fr 1fr;gap:32px}
   .contact-grid{grid-template-columns:1fr}
   .row2{grid-template-columns:1fr}
@@ -246,3 +257,101 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 .page-hero.ph-fleet   {background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/fleet-hero.jpg') center 50%/cover}
 .page-hero.ph-about   {background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/about-hero.jpg') center 45%/cover}
 .page-hero.ph-contact {background:linear-gradient(rgba(21,35,63,.78),rgba(21,35,63,.92)),url('../assets/images/contact-hero.jpg') center 45%/cover}
+
+/* ============================================================
+   18. How it works, testimonials, destination photo zoom
+   ============================================================ */
+
+/* Destination photo lives on a child layer so it can zoom on hover */
+.dest .ph{position:absolute;inset:0;z-index:0;background-position:center;background-size:cover;transition:transform .5s ease}
+.dest:hover .ph{transform:scale(1.07)}
+
+/* How it works */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px}
+.step .num{width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);
+  font-family:'Fraunces',serif;font-weight:700;font-size:1.2rem;
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.step h3{font-size:1.2rem;margin-bottom:8px}
+.step p{font-size:.93rem;color:#55615a}
+
+/* Testimonials */
+.quote-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;
+  display:flex;flex-direction:column;gap:14px}
+.quote .stars{color:var(--gold);letter-spacing:3px;font-size:.95rem}
+.quote blockquote{font-size:.96rem;line-height:1.55;flex:1}
+.quote figcaption b{display:block;font-size:.92rem}
+.quote figcaption span{font-size:.82rem;color:#7c7058}
+
+/* Service cards: gold line icons + link affordance */
+.card{display:flex;flex-direction:column}
+.card .ic{width:52px;height:52px;border-radius:14px;margin-bottom:20px}
+.card .ic svg{width:26px;height:26px;fill:none;stroke:var(--gold);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card .feat{list-style:none;margin:16px 0 0;padding:0}
+.card .feat li{position:relative;padding:5px 0 5px 26px;font-size:.9rem;color:var(--sand)}
+.card .feat li::before{content:"\2713";position:absolute;left:0;top:5px;color:var(--gold);font-weight:700}
+.card .feat li+li{border-top:1px solid rgba(232,220,196,.1)}
+.card .more{margin-top:auto;padding-top:16px;font-size:.85rem;font-weight:600;color:var(--gold);opacity:.75;transition:opacity .2s,letter-spacing .2s}
+.card:hover .more{opacity:1;letter-spacing:.03em}
+
+/* Route showcase (safaris page) — full-bleed interactive day switcher */
+.route-show{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:0}
+.rs-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .8s ease}
+.rs-bg.active{opacity:1}
+.route-show::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(10,16,30,.85) 0%,rgba(10,16,30,.55) 48%,rgba(10,16,30,.3) 100%)}
+.rs-inner{position:relative;z-index:1;display:flex;align-items:center;gap:38px;width:100%;padding-top:72px;padding-bottom:72px}
+.rs-rail{position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;flex:0 0 auto}
+.rs-rail::before{content:"";position:absolute;top:8px;bottom:8px;left:50%;transform:translateX(-50%);width:2px;background:rgba(255,255,255,.3)}
+.rs-rail .dot{position:relative;z-index:1;width:10px;height:10px;border-radius:50%;border:0;cursor:pointer;
+  background:rgba(255,255,255,.6);color:var(--ink);padding:0;display:flex;align-items:center;justify-content:center;
+  font-family:'Fraunces',serif;font-weight:700;font-size:0;transition:all .25s}
+.rs-rail .dot.active{width:38px;height:38px;background:var(--gold);font-size:1.05rem;box-shadow:0 6px 18px rgba(201,154,60,.4)}
+.rs-content{flex:0 1 400px}
+.rs-day{display:block;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold);
+  margin:14px 0 6px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.rs-title{font-size:clamp(1.8rem,3.4vw,2.7rem);color:#fff;margin-bottom:14px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.rs-desc{color:rgba(247,244,238,.88);font-size:1.02rem;max-width:46ch;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.rs-content{transition:opacity .18s ease}
+.rs-content.swap .rs-day,.rs-content.swap .rs-title,.rs-content.swap .rs-desc{opacity:0}
+.rs-day,.rs-title,.rs-desc{transition:opacity .25s ease}
+.rs-cta{margin-top:26px}
+.rs-right{margin-left:auto;min-width:0;display:flex;flex-direction:column}
+.rs-thumbs{display:flex;align-items:center;gap:14px;overflow-x:auto;padding:14px 2px;scrollbar-width:none}
+.rs-thumbs::-webkit-scrollbar{display:none}
+.rs-thumb{flex:0 0 128px;height:176px;border-radius:12px;overflow:hidden;position:relative;cursor:pointer;
+  border:1px solid rgba(255,255,255,.3);background-size:cover;background-position:center;
+  display:flex;align-items:flex-end;padding:12px;filter:brightness(.72);transition:all .3s}
+.rs-thumb::before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,16,30,.75))}
+.rs-thumb span{position:relative;font-family:'Fraunces',serif;font-style:italic;font-size:.85rem;color:#fff;
+  text-align:left;line-height:1.25;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.rs-thumb:hover{filter:brightness(.9)}
+.rs-thumb.active{flex-basis:158px;height:210px;filter:none;border-color:rgba(201,154,60,.75);
+  box-shadow:0 14px 40px rgba(0,0,0,.4)}
+.rs-nav{display:flex;gap:10px;margin-top:6px}
+.rs-nav button{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.35);cursor:pointer;
+  background:rgba(255,255,255,.14);color:#fff;font-size:1.1rem;transition:background .2s}
+.rs-nav button:hover{background:rgba(201,154,60,.6)}
+
+/* Itinerary cards with a photo panel */
+.itin.has-photo{display:grid;grid-template-columns:300px 1fr;padding:0;overflow:hidden}
+.itin-ph{background-size:cover;background-position:center;min-height:230px}
+.itin-body{padding:26px}
+.itin-body .days{margin-top:10px}
+
+
+/* Moments photo mosaic */
+.moments{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:280px;gap:16px}
+.moment{position:relative;border-radius:14px;overflow:hidden}
+.moment.wide{grid-column:span 2}
+.moment img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.moment:hover img{transform:scale(1.05)}
+.moment::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(10,16,30,.7));pointer-events:none}
+.moment span{position:absolute;left:16px;bottom:13px;z-index:1;color:#fff;
+  font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+
+/* Deep links from homepage cards land cleanly on service rows */
+.detail[id]{scroll-margin-top:92px}
+.detail:target{background:rgba(201,154,60,.08);border-radius:12px;
+  padding-left:14px;padding-right:14px;margin:0 -14px}
