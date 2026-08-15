@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Almado Safaris Kenya — Trusted Travel __TITLE__ Transport in Kenya</title>
+  <title>Almado Safaris Kenya — Trusted Travel &amp; Transport in Kenya</title>
   <meta name="description" content="Almado Support Enterprise — safe, reliable travel and transport across Kenya.">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/glass.css">
 </head>
-<body>
+<body class="glass">
   <header>
     <div class="wrap nav">
       <a href="index.html" class="brand">
@@ -72,10 +73,10 @@
       <div class="sec-head"><span class="eyebrow">Where we'll take you</span><h2>Kenya's most loved destinations</h2>
         <p>From the great wildebeest migration to the foot of Kilimanjaro and the white sands of the coast.</p></div>
       <div class="dest-grid">
-        <div class="dest"><span>Maasai Mara</span></div>
-        <div class="dest"><span>Amboseli</span></div>
-        <div class="dest"><span>Tsavo East &amp; West</span></div>
-        <div class="dest"><span>Diani &amp; the Coast</span></div>
+        <div class="dest" style="background-image:url('assets/images/dest-mara.jpg')"><span>Maasai Mara</span></div>
+        <div class="dest" style="background-image:url('assets/images/dest-amboseli.jpg')"><span>Amboseli</span></div>
+        <div class="dest" style="background-image:url('assets/images/dest-tsavo.jpg')"><span>Tsavo East &amp; West</span></div>
+        <div class="dest" style="background-image:url('assets/images/dest-diani.jpg')"><span>Diani &amp; the Coast</span></div>
       </div>
       <div style="margin-top:36px"><a href="safaris.html" class="btn btn-gold">Explore safaris</a></div>
     </div>
@@ -120,5 +121,24 @@
   </a>
 
   <script src="js/main.js"></script>
+  <script>
+    // Background video: desktop only, respects reduced-motion.
+    // Drop your generated clip at assets/videos/hero.mp4 and it just works;
+    // until then (or on mobile) the savanna image fallback shows.
+    (function () {
+      if (window.innerWidth < 900) return;
+      if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      var v = document.createElement("video");
+      v.className = "bg-video";
+      v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+      v.src = "assets/videos/hero.mp4";
+      v.addEventListener("canplay", function () {
+        document.body.classList.add("has-video");
+        v.play().catch(function () {});
+      });
+      v.addEventListener("error", function () { v.remove(); });
+      document.body.prepend(v);
+    })();
+  </script>
 </body>
 </html>

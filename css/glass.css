@@ -1,0 +1,160 @@
+/* ============================================================
+   Almado Safaris Kenya — Glassmorphism trial (safaris page only)
+   Loaded after styles.css by safaris.html; overrides its look.
+   ============================================================ */
+
+/* Full-page photo backdrop the glass sits on */
+body.glass{
+  background:
+    linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78)),
+    url('../assets/images/savanna.jpg') center/cover fixed;
+  color:var(--paper);
+}
+
+/* Full-page background video (homepage) — sits under the dark tint.
+   Injected by JS only on desktop; body image is the fallback/poster. */
+.bg-video{
+  position:fixed;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:-2;pointer-events:none;
+}
+/* Dark tint painted over the video, under the content */
+body.glass.has-video::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78));
+}
+
+/* Frosted header */
+body.glass header{
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+/* Hero becomes a floating glass panel instead of its own photo band */
+body.glass .page-hero{background:none}
+body.glass .page-hero-inner{
+  margin:56px auto 0;
+  padding:48px 48px 44px;
+  border-radius:24px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 18px 50px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.22);
+}
+
+/* Homepage hero — floating glass panel + frosted checkmark strip */
+body.glass .hero{background:none}
+body.glass .hero-inner{
+  margin:64px auto 48px;
+  padding:56px 52px;
+  border-radius:24px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 18px 50px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.22);
+}
+body.glass .hero-strip{
+  border-top:0;
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-top:1px solid rgba(255,255,255,.14);
+  border-bottom:1px solid rgba(255,255,255,.14);
+}
+
+/* Services cards — frosted tiles */
+body.glass .services{background:transparent}
+body.glass .card{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+}
+body.glass .card:hover{border-color:rgba(201,154,60,.65)}
+body.glass .card .ic{background:rgba(201,154,60,.2);border:1px solid rgba(201,154,60,.3)}
+
+/* Trust stats — slim glass tiles */
+body.glass .trust{background:transparent}
+body.glass .trust-grid>div{
+  background:rgba(255,255,255,.07);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:16px;
+  padding:26px 16px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2);
+}
+
+/* Section shells go transparent; text flips to light */
+body.glass section,
+body.glass section.fleet{background:transparent;color:var(--paper)}
+body.glass .sec-head h2{color:var(--paper)}
+body.glass .sec-head p{color:rgba(247,244,238,.75)}
+body.glass .eyebrow{color:var(--gold)}
+
+/* Destination cards — glass tiles with a soft glow */
+body.glass .dest{
+  background-size:cover;
+  background-position:center;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.2);
+  transition:transform .2s, border-color .2s;
+}
+body.glass .dest:hover{transform:translateY(-5px);border-color:rgba(201,154,60,.65)}
+body.glass .dest::after{background:linear-gradient(transparent 45%, rgba(10,16,30,.75))}
+body.glass .dest span{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.55)}
+
+/* Itinerary cards — the main frosted panels */
+body.glass .itin{
+  background:rgba(255,255,255,.09);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 14px 40px rgba(0,0,0,.32), inset 0 1px 0 rgba(255,255,255,.22);
+  transition:transform .2s, border-color .2s;
+}
+body.glass .itin:hover{transform:translateY(-4px);border-color:rgba(201,154,60,.6)}
+body.glass .itin h3{color:var(--paper)}
+body.glass .itin p{color:rgba(247,244,238,.78)}
+body.glass .itin .days{color:rgba(247,244,238,.6)}
+body.glass .itin .tag{
+  color:var(--gold);
+  background:rgba(201,154,60,.16);
+  border:1px solid rgba(201,154,60,.35);
+}
+
+/* Gold button gets a glassy glow */
+body.glass .btn-gold{box-shadow:0 8px 30px rgba(201,154,60,.45)}
+
+/* Frosted footer */
+body.glass footer{
+  background:rgba(10,16,30,.55);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+/* Fallback where backdrop-filter is unsupported: solidify the panels */
+@supports not (backdrop-filter:blur(1px)){
+  body.glass header{background:rgba(13,22,40,.92)}
+  body.glass .page-hero-inner,
+  body.glass .hero-inner,
+  body.glass .hero-strip,
+  body.glass .card,
+  body.glass .trust-grid>div,
+  body.glass .itin,
+  body.glass .dest{background:rgba(20,30,52,.88)}
+  body.glass footer{background:rgba(10,16,30,.92)}
+}
+
+@media(max-width:860px){
+  body.glass .page-hero-inner{margin:24px 16px 0;padding:32px 24px}
+  body.glass .hero-inner{margin:24px 16px 24px;padding:36px 26px}
+}
