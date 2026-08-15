@@ -280,6 +280,7 @@ footer{background:#101713;color:var(--sand);padding:54px 0 28px}
 
 /* About logo block */
 .about-logo{max-width:300px;margin:0 auto 8px}
+.brand-note{color:#55615a;margin-top:8px}
 
 /* Photo heroes don't need the decorative sun overlay */
 .hero .horizon, .page-hero .horizon{display:none}
