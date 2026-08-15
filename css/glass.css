@@ -325,4 +325,7 @@ body.glass footer{
 @media(max-width:860px){
   body.glass .page-hero-inner{margin:24px 16px 0;padding:32px 24px}
   body.glass .hero-inner{margin:24px 16px 24px;padding:36px 26px}
+  /* iOS Safari doesn't support fixed backgrounds — avoid stretched/janky
+     rendering on phones by letting the backdrop scroll */
+  body.glass{background-attachment:scroll!important}
 }
