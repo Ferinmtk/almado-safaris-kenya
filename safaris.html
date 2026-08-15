@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=12">
-  <link rel="stylesheet" href="css/glass.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=14">
+  <link rel="stylesheet" href="css/glass.css?v=14">
 </head>
 <body class="glass bg-lions">
   <header>
@@ -53,42 +53,57 @@
     </div>
   </div></section>
 
-  <section><div class="wrap">
-    <div class="sec-head"><span class="eyebrow">The classic route</span><h2>A typical safari, airport to airport</h2>
-      <p>Most of our guests follow a loop like this. Use it as a template — we stretch or shrink every leg to fit your dates.</p></div>
-    <div class="route-grid">
-      <div class="rt wide" style="background-image:url('assets/images/route-arrival.jpg')">
-        <span class="rt-num">1</span>
-        <div class="rt-body"><span class="rt-day">Day 1 &middot; Arrival &middot; Nairobi</span><h3>Touchdown at JKIA</h3>
-          <p>Your driver waits in arrivals, sign in hand — then it's the hotel, dinner, and a briefing on the days ahead.</p></div>
+  <section class="route-show" id="route" aria-label="A typical safari, airport to airport">
+    <div class="rs-bg active" style="background-image:url('assets/images/route-arrival.jpg')"></div>
+    <div class="rs-bg" style="background-image:url('assets/images/route-riftvalley.jpg')"></div>
+    <div class="rs-bg" style="background-image:url('assets/images/route-balloons.jpg')"></div>
+    <div class="rs-bg" style="background-image:url('assets/images/route-sundowner.jpg');background-position:center bottom"></div>
+    <div class="rs-bg" style="background-image:url('assets/images/route-beach.jpg')"></div>
+    <div class="rs-bg" style="background-image:url('assets/images/route-departure.jpg')"></div>
+    <div class="wrap rs-inner">
+      <div class="rs-rail" role="tablist" aria-label="Days">
+        <button class="dot active" aria-label="Day 1"><span>1</span></button>
+        <button class="dot" aria-label="Day 2"><span>2</span></button>
+        <button class="dot" aria-label="Day 3"><span>3</span></button>
+        <button class="dot" aria-label="Day 4"><span>4</span></button>
+        <button class="dot" aria-label="Day 5"><span>5</span></button>
+        <button class="dot" aria-label="Final day"><span>&#10003;</span></button>
       </div>
-      <div class="rt" style="background-image:url('assets/images/route-riftvalley.jpg')">
-        <span class="rt-num">2</span>
-        <div class="rt-body"><span class="rt-day">Day 2 &middot; To the Mara</span><h3>Into the Great Rift Valley</h3>
-          <p>Photo stop on the escarpment; first game drive by afternoon.</p></div>
+      <div class="rs-content">
+        <span class="eyebrow" style="color:var(--gold)">The classic route</span>
+        <div class="rt-day rs-day">Day 1 &middot; Arrival &middot; Nairobi</div>
+        <h2 class="rs-title">Touchdown at JKIA</h2>
+        <p class="rs-desc">Your driver waits in arrivals, sign in hand — then it's the hotel, dinner, and a briefing on the days ahead.</p>
+        <a href="contact.html" class="btn btn-gold rs-cta">Plan my safari</a>
       </div>
-      <div class="rt" style="background-image:url('assets/images/route-balloons.jpg')">
-        <span class="rt-num">3</span>
-        <div class="rt-body"><span class="rt-day">Day 3 &middot; Maasai Mara</span><h3>A full day among the Big Five</h3>
-          <p>Dawn drive, picnic under an acacia — balloons at first light, if you dare.</p></div>
-      </div>
-      <div class="rt wide" style="background-image:url('assets/images/route-sundowner.jpg');background-position:center bottom">
-        <span class="rt-num">4</span>
-        <div class="rt-body"><span class="rt-day">Day 4 &middot; Mara &rarr; Amboseli</span><h3>Elephants under Kilimanjaro</h3>
-          <p>Cross country for the classic shot, then a sundowner at the lodge as Kili turns pink.</p></div>
-      </div>
-      <div class="rt wide" style="background-image:url('assets/images/route-beach.jpg')">
-        <span class="rt-num">5</span>
-        <div class="rt-body"><span class="rt-day">Day 5 &middot; Optional &middot; The Coast</span><h3>Trade dust for ocean</h3>
-          <p>Unwind on Diani's white sand — or spend the day in Nairobi's markets and the giraffe centre.</p></div>
-      </div>
-      <div class="rt" style="background-image:url('assets/images/route-departure.jpg')">
-        <span class="rt-num">&#10003;</span>
-        <div class="rt-body"><span class="rt-day">Final day &middot; Departure</span><h3>Back to JKIA</h3>
-          <p>Return timed around traffic and your flight. Karibu tena.</p></div>
+      <div class="rs-right">
+        <div class="rs-thumbs">
+          <button class="rs-thumb active" style="background-image:url('assets/images/route-arrival.jpg')"
+            data-day="Day 1 &middot; Arrival &middot; Nairobi" data-title="Touchdown at JKIA"
+            data-desc="Your driver waits in arrivals, sign in hand — then it's the hotel, dinner, and a briefing on the days ahead."><span>Touchdown at JKIA</span></button>
+          <button class="rs-thumb" style="background-image:url('assets/images/route-riftvalley.jpg')"
+            data-day="Day 2 &middot; Nairobi &rarr; Maasai Mara" data-title="Into the Great Rift Valley"
+            data-desc="An early start west with a photo stop on the escarpment — you're in the Mara by lunch, and on your first game drive by afternoon."><span>Into the Rift Valley</span></button>
+          <button class="rs-thumb" style="background-image:url('assets/images/route-balloons.jpg')"
+            data-day="Day 3 &middot; Maasai Mara" data-title="A full day among the Big Five"
+            data-desc="Dawn drive while the cats are hunting, picnic under an acacia, out again till sunset — and balloons over the plains at first light, if you dare."><span>The Big Five</span></button>
+          <button class="rs-thumb" style="background-image:url('assets/images/route-sundowner.jpg');background-position:center bottom"
+            data-day="Day 4 &middot; Mara &rarr; Amboseli" data-title="Elephants under Kilimanjaro"
+            data-desc="Cross country for the classic shot — elephant herds under Africa's highest peak — then a sundowner as Kili turns pink."><span>Kilimanjaro views</span></button>
+          <button class="rs-thumb" style="background-image:url('assets/images/route-beach.jpg')"
+            data-day="Day 5 &middot; Optional &middot; The Coast" data-title="Trade dust for ocean"
+            data-desc="Add days on Diani's white sand to unwind after the parks — or spend the day in Nairobi's markets and the giraffe centre."><span>The Coast</span></button>
+          <button class="rs-thumb" style="background-image:url('assets/images/route-departure.jpg')"
+            data-day="Final day &middot; Departure" data-title="Back to JKIA, memory cards full"
+            data-desc="The return drive is timed around Nairobi traffic and your flight, with a stop for last-minute gifts. Karibu tena — welcome back anytime."><span>Departure</span></button>
+        </div>
+        <div class="rs-nav">
+          <button class="rs-prev" aria-label="Previous day">&larr;</button>
+          <button class="rs-next" aria-label="Next day">&rarr;</button>
+        </div>
       </div>
     </div>
-  </div></section>
+  </section>
 
   <section><div class="wrap">
     <div class="sec-head"><span class="eyebrow">Moments from the road</span><h2>This is what a trip with us feels like</h2></div>
@@ -151,5 +166,44 @@
   </a>
 
   <script src="js/main.js"></script>
+  <script>
+    // Classic-route showcase: thumbnails/dots/arrows switch the active day;
+    // background crossfades, text swaps with a short fade.
+    (function () {
+      var show = document.querySelector(".route-show");
+      if (!show) return;
+      var bgs = show.querySelectorAll(".rs-bg");
+      var dots = show.querySelectorAll(".rs-rail .dot");
+      var thumbs = show.querySelectorAll(".rs-thumb");
+      var day = show.querySelector(".rs-day");
+      var title = show.querySelector(".rs-title");
+      var desc = show.querySelector(".rs-desc");
+      var content = show.querySelector(".rs-content");
+      var current = 0;
+
+      function go(i) {
+        i = (i + thumbs.length) % thumbs.length;
+        if (i === current) return;
+        current = i;
+        bgs.forEach(function (b, n) { b.classList.toggle("active", n === i); });
+        dots.forEach(function (d, n) { d.classList.toggle("active", n === i); });
+        thumbs.forEach(function (t, n) { t.classList.toggle("active", n === i); });
+        content.classList.add("swap");
+        setTimeout(function () {
+          var t = thumbs[i];
+          day.innerHTML = t.getAttribute("data-day");
+          title.textContent = t.getAttribute("data-title");
+          desc.textContent = t.getAttribute("data-desc");
+          content.classList.remove("swap");
+        }, 180);
+        thumbs[i].scrollIntoView({ block: "nearest", inline: "nearest", behavior: "smooth" });
+      }
+
+      thumbs.forEach(function (t, i) { t.addEventListener("click", function () { go(i); }); });
+      dots.forEach(function (d, i) { d.addEventListener("click", function () { go(i); }); });
+      show.querySelector(".rs-prev").addEventListener("click", function () { go(current - 1); });
+      show.querySelector(".rs-next").addEventListener("click", function () { go(current + 1); });
+    })();
+  </script>
 </body>
 </html>

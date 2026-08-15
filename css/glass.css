@@ -157,12 +157,7 @@ body.glass .quote figcaption b{color:var(--paper)}
 body.glass .quote figcaption span{color:rgba(247,244,238,.6)}
 body.glass .step .num{box-shadow:0 6px 18px rgba(201,154,60,.4)}
 
-/* Route + moments photo tiles pick up the glass edge treatment */
-body.glass .rt{
-  border:1px solid rgba(255,255,255,.16);
-  box-shadow:0 12px 32px rgba(0,0,0,.3);
-}
-body.glass .rt:hover{border-color:rgba(201,154,60,.6)}
+/* Moments photo tiles pick up the glass edge treatment */
 
 body.glass .moment{
   border:1px solid rgba(255,255,255,.16);
