@@ -61,7 +61,7 @@ body.glass.bg-contact{
 
 /* Frosted header */
 body.glass header{
-  background:rgba(255,255,255,.07);
+  background:rgba(50,58,76,.48);
   backdrop-filter:blur(14px) saturate(140%);
   -webkit-backdrop-filter:blur(14px) saturate(140%);
   border-bottom:1px solid rgba(255,255,255,.14);
@@ -73,7 +73,7 @@ body.glass .page-hero-inner{
   margin:56px auto 0;
   padding:48px 48px 44px;
   border-radius:24px;
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(18px) saturate(150%);
   -webkit-backdrop-filter:blur(18px) saturate(150%);
   border:1px solid rgba(255,255,255,.18);
@@ -89,7 +89,7 @@ body.glass .hero-inner{
   margin:64px auto 48px;
   padding:56px 52px;
   border-radius:24px;
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(18px) saturate(150%);
   -webkit-backdrop-filter:blur(18px) saturate(150%);
   border:1px solid rgba(255,255,255,.18);
@@ -97,7 +97,7 @@ body.glass .hero-inner{
 }
 body.glass .hero-strip{
   border-top:0;
-  background:rgba(255,255,255,.07);
+  background:rgba(50,58,76,.48);
   backdrop-filter:blur(14px) saturate(140%);
   -webkit-backdrop-filter:blur(14px) saturate(140%);
   border-top:1px solid rgba(255,255,255,.14);
@@ -107,7 +107,7 @@ body.glass .hero-strip{
 /* Services cards — frosted tiles */
 body.glass .services{background:transparent}
 body.glass .card{
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.16);
@@ -122,7 +122,7 @@ body.glass .card p{color:rgba(247,244,238,.78)}
 /* Trust stats — slim glass tiles */
 body.glass .trust{background:transparent}
 body.glass .trust-grid>div{
-  background:rgba(255,255,255,.07);
+  background:rgba(50,58,76,.48);
   backdrop-filter:blur(14px) saturate(140%);
   -webkit-backdrop-filter:blur(14px) saturate(140%);
   border:1px solid rgba(255,255,255,.15);
@@ -142,7 +142,7 @@ body.glass .eyebrow{color:var(--gold)}
 body.glass .dest{
   background-size:cover;
   background-position:center;
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(14px) saturate(140%);
   -webkit-backdrop-filter:blur(14px) saturate(140%);
   border:1px solid rgba(255,255,255,.16);
@@ -155,7 +155,7 @@ body.glass .dest span{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.55)}
 
 /* Itinerary cards — the main frosted panels */
 body.glass .itin{
-  background:rgba(255,255,255,.09);
+  background:rgba(54,63,83,.52);
   backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.18);
@@ -175,7 +175,7 @@ body.glass .itin .tag{
 /* How-it-works steps + testimonial quotes — frosted tiles */
 body.glass .step,
 body.glass .quote{
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.16);
@@ -191,7 +191,7 @@ body.glass .step .num{box-shadow:0 6px 18px rgba(201,154,60,.4)}
 
 /* Service cards become frosted photo cards (services page) */
 body.glass .detail{
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.16);
@@ -210,7 +210,7 @@ body.glass .detail:target{
 
 /* Vehicle cards become frosted tiles (fleet page) */
 body.glass .vehicle{
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.16);
@@ -239,7 +239,7 @@ body.glass .about-grid h2{color:var(--paper)}
 body.glass .about-grid p{color:rgba(247,244,238,.78)}
 body.glass .about-grid .ph{border:1px solid rgba(255,255,255,.16);box-shadow:0 12px 32px rgba(0,0,0,.3)}
 body.glass .value{
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.16);
@@ -255,7 +255,7 @@ body.glass .info-row{border-top-color:rgba(255,255,255,.14)}
 body.glass .info-row span{color:rgba(247,244,238,.78)}
 body.glass .info-row .ic{background:rgba(201,154,60,.16);border:1px solid rgba(201,154,60,.3)}
 body.glass .contact-grid form{
-  background:rgba(255,255,255,.08);
+  background:rgba(52,61,80,.5);
   backdrop-filter:blur(16px) saturate(150%);
   -webkit-backdrop-filter:blur(16px) saturate(150%);
   border:1px solid rgba(255,255,255,.16);
