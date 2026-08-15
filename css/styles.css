@@ -112,7 +112,7 @@ section{padding:84px 0}
 
 /* 9. Fleet ------------------------------------------------- */
 .fleet{background:var(--sand)}
-.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fleet-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:960px;margin:0 auto}
 .vehicle{background:var(--paper);border-radius:16px;overflow:hidden;box-shadow:0 6px 20px rgba(22,32,28,.07)}
 .vehicle .ph{aspect-ratio:16/10;background:#cabfa6 center/cover;display:flex;align-items:center;justify-content:center;color:#7c7058;font-size:.85rem;letter-spacing:.05em}
 .vehicle .body{padding:20px}

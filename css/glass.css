@@ -30,6 +30,13 @@ body.glass.bg-lions{
     url('../assets/images/lions-bg.jpg') center/cover fixed;
 }
 
+/* Per-page backdrop: fleet page rides with the sunset game drive */
+body.glass.bg-fleet{
+  background:
+    linear-gradient(rgba(13,22,40,.55), rgba(13,22,40,.78)),
+    url('../assets/images/safari-drive.jpg') center/cover fixed;
+}
+
 /* Frosted header */
 body.glass header{
   background:rgba(255,255,255,.07);
@@ -50,6 +57,9 @@ body.glass .page-hero-inner{
   border:1px solid rgba(255,255,255,.18);
   box-shadow:0 18px 50px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.22);
 }
+/* Glass hero panel carries its own spacing, so the section after it
+   doesn't need the full 84px band — kills the dead-space gap */
+body.glass .page-hero + section{padding-top:44px}
 
 /* Homepage hero — floating glass panel + frosted checkmark strip */
 body.glass .hero{background:none}
@@ -180,6 +190,19 @@ body.glass .detail:target{
   margin:0 0 16px;padding:26px;
 }
 
+/* Vehicle cards become frosted tiles (fleet page) */
+body.glass .vehicle{
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px) saturate(150%);
+  -webkit-backdrop-filter:blur(16px) saturate(150%);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 12px 32px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.2);
+  transition:transform .2s, border-color .2s;
+}
+body.glass .vehicle:hover{transform:translateY(-4px);border-color:rgba(201,154,60,.6)}
+body.glass .vehicle h3{color:var(--paper)}
+body.glass .vehicle p{color:rgba(247,244,238,.78)}
+
 /* Moments photo tiles pick up the glass edge treatment */
 
 body.glass .moment{
@@ -209,6 +232,7 @@ body.glass footer{
   body.glass .itin,
   body.glass .step,
   body.glass .quote,
+  body.glass .vehicle,
   body.glass .dest{background:rgba(20,30,52,.88)}
   body.glass footer{background:rgba(10,16,30,.92)}
 }
