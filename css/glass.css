@@ -165,7 +165,7 @@ body.glass .itin{
 body.glass .itin:hover{transform:translateY(-4px);border-color:rgba(201,154,60,.6)}
 body.glass .itin h3{color:var(--paper)}
 body.glass .itin p{color:rgba(247,244,238,.78)}
-body.glass .itin .days{color:rgba(247,244,238,.6)}
+body.glass .itin .days{color:rgba(247,244,238,.78)}
 body.glass .itin .tag{
   color:var(--gold);
   background:rgba(201,154,60,.16);
@@ -186,7 +186,7 @@ body.glass .quote blockquote{color:var(--paper)}
 body.glass .step p{color:rgba(247,244,238,.78)}
 body.glass .quote blockquote{color:rgba(247,244,238,.88)}
 body.glass .quote figcaption b{color:var(--paper)}
-body.glass .quote figcaption span{color:rgba(247,244,238,.6)}
+body.glass .quote figcaption span{color:rgba(247,244,238,.78)}
 body.glass .step .num{box-shadow:0 6px 18px rgba(201,154,60,.4)}
 
 /* Service cards become frosted photo cards (services page) */
@@ -201,7 +201,7 @@ body.glass .detail{
 body.glass .detail:hover{transform:translateY(-4px);border-color:rgba(201,154,60,.5)}
 body.glass .detail h3{color:var(--paper)}
 body.glass .detail p{color:rgba(247,244,238,.8)}
-body.glass .detail ul{color:rgba(247,244,238,.68)}
+body.glass .detail ul{color:rgba(247,244,238,.8)}
 body.glass .detail .ic{background:rgba(201,154,60,.16);border:1px solid rgba(201,154,60,.3)}
 body.glass .detail:target{
   border-color:rgba(201,154,60,.75);
@@ -222,8 +222,8 @@ body.glass .vehicle h3{color:var(--paper)}
 body.glass .vehicle p{color:rgba(247,244,238,.78)}
 
 /* Spec chips + booking links flip to light-on-dark */
-body.glass .chip{color:var(--gold);background:rgba(201,154,60,.14);border-color:rgba(201,154,60,.42)}
-body.glass .book-link{color:var(--gold)}
+body.glass .chip{color:#dcb15e;background:rgba(201,154,60,.14);border-color:rgba(201,154,60,.42)}
+body.glass .book-link{color:#dcb15e}
 
 /* Weddings band + interior tiles pick up the glass edge */
 body.glass .events-ph,
@@ -252,7 +252,7 @@ body.glass .brand-note{color:rgba(247,244,238,.78)}
 /* Contact page: info rows + frosted form */
 body.glass .contact-info p{color:rgba(247,244,238,.78)}
 body.glass .info-row{border-top-color:rgba(255,255,255,.14)}
-body.glass .info-row span{color:rgba(247,244,238,.72)}
+body.glass .info-row span{color:rgba(247,244,238,.78)}
 body.glass .info-row .ic{background:rgba(201,154,60,.16);border:1px solid rgba(201,154,60,.3)}
 body.glass .contact-grid form{
   background:rgba(255,255,255,.08);
@@ -274,11 +274,11 @@ body.glass .field input:focus,
 body.glass .field select:focus,
 body.glass .field textarea:focus{border-color:rgba(201,154,60,.7);outline:none}
 body.glass .field select option{background:#141e34;color:var(--paper)}
-body.glass .form-note{color:rgba(247,244,238,.6)}
+body.glass .form-note{color:rgba(247,244,238,.78)}
 
 /* Services page: pricing note + SEO fine print */
 body.glass .pricing-note{color:rgba(247,244,238,.75)}
-body.glass .fine-print{color:rgba(247,244,238,.55)}
+body.glass .fine-print{color:rgba(247,244,238,.7)}
 
 /* FAQ rows on glass */
 body.glass .faq details{border-bottom-color:rgba(255,255,255,.14)}
